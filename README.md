@@ -9,23 +9,36 @@ In this project, we created a dataset of 10,000 images for 10 diseases (=10 diag
 
 ![img](https://github.com/whria78/can/blob/main/thumbnails/actinickeratosis.jpg?raw=true)
 
-
 ### Basal cell carcinoma ###
 
-	![img](https://github.com/whria78/can/raw/master/thumbnails/basalcellcarcinoma.jpg)
+![img](https://github.com/whria78/can/blob/main/thumbnails/basalcellcarcinoma.jpg?raw=true)
 
 ### Dermatofibroma ###
 
+![img](https://github.com/whria78/can/blob/main/thumbnails/dermatofibroma.jpg?raw=true)
+
 ### Hemangioma ###
+
+![img](https://github.com/whria78/can/blob/main/thumbnails/hemangioma.jpg?raw=true)
 
 ### Malignant melanoma ###
 
+![img](https://github.com/whria78/can/blob/main/thumbnails/malignantmelanoma.jpg?raw=true)
+
 ### Melanocytic nevus ###
+
+![img](https://github.com/whria78/can/blob/main/thumbnails/melanocyticnevus.jpg?raw=true)
 
 ### Pyogenic granuloma ###
 
+![img](https://github.com/whria78/can/blob/main/thumbnails/pyogenicgranuloma.jpg?raw=true)
+
 ### Seborrheic keratosis ###
 
+![img](https://github.com/whria78/can/blob/main/thumbnails/seborrheickeratosis.jpg?raw=true)
+
 ### Squamous cell carcinoma ###
+
+![img](https://github.com/whria78/can/blob/main/thumbnails/squamouscellcarcinoma.jpg?raw=true)
 
 ### Intraepithelial carcinoma ###
