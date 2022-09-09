@@ -61,7 +61,7 @@ In an onychomycosis study, we detected nail plates in wide-field images, cropped
 
 Model dermatology is a multi-class classifier that can classify 184 diseases. For diagnosing using only clinical photographs, the performance of the algorithm was comparable with that of specialists. By using region-based CNN, it is possible to detect nodular lesions and process a large number of photographs without the hard work of an annotator.
 
-CAN10000 is a dataset of 10000 training images for detecting nodular skin lesions. We collected clinical photographs on the Internet. The limitation of this dataset is that it is annotated by the machine based on image findings. The proposed dataset is used as an additional training dataset along with the private dataset of hospitals. AFter that, algorithms should be validated in the intended use setting, using the test dataset with clear ground truth.
+CAN10000 is a dataset of 10000 training images for detecting nodular skin lesions. We collected clinical photographs on the Internet. The limitation of this dataset is that it is annotated by the machine based on image findings. The proposed dataset is used as an additional training dataset along with the private dataset of hospitals. This dataset is not for validation or testing. Algorithms should be validated in the intended use setting, using the test dataset with clear ground truth.
 
 ## Author ##
 Han Seung Seog (I Dermatology Clinic & IDerma, Inc)
