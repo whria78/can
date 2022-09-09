@@ -49,7 +49,7 @@ python3 download.py
 pending...
 
 
-### Comment ###
+## Comment ##
 
 Clinical photographs in Dermatology are the most readily available image, however the most non-standardized image. Dermatology images are basically 2D images. However, because the shape of lesion of interest changes according to distance, composition, and clinical course, the actual photograph we encounter is multi-dimensional data. In addition, because the quality of the submitted image is not standardized, any disturbance in the focus and light source could confuse the reader. Since there are more than 100 conditions to be considered in dermatological diseases, it is also challenging to make an algorithm that can handle multiple classes. Despite the need for a much larger amount of data compared to general vision studies, it is difficult for researchers in different hospitals to train an algorithm concurrently while sharing patients’ photographs for privacy issues.
 
@@ -61,5 +61,5 @@ Model dermatology is a multi-class classifier that can classify 184 diseases. Fo
 
 CAN10000 is a dataset of 10000 training images for detecting nodular skin lesions. We collected clinical photographs on the Internet. The limitation of this dataset is that it is annotated by the machine based on image findings. We expect a better algorithm if the proposed dataset is used as an adjuvant dataset along with the private dataset of hospitals. Algorithms should be validated in the intended use setting, using the test dataset with clear ground truth.
 
-### Author ###
+## Author ##
 Han Seung Seog (I Dermatology Clinic & IDerma, Inc)
