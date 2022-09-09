@@ -6,10 +6,13 @@ In this project, we created a dataset of 10,000 images for 10 diseases (=10 diag
 
 
 ### Actinic keratosis ###
-	![img](https://github.com/whria78/can/raw/master/thumbnails/actinickeratosis.jpg)
+
+![img](https://github.com/whria78/can/blob/main/thumbnails/actinickeratosis.jpg?raw=true)
 
 
 ### Basal cell carcinoma ###
+
+	![img](https://github.com/whria78/can/raw/master/thumbnails/basalcellcarcinoma.jpg)
 
 ### Dermatofibroma ###
 
