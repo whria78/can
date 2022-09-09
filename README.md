@@ -4,6 +4,12 @@ As for the dermatology public datasets, the Edinburgh dataset, Asan test dataset
 
 In this project, we created a dataset of 10,000 images for 10 diseases (=10 diagnoses of Edinburgh dataset) by crawling photographs on the Internet and annotating them by an algorithm. Like the way of ImageNet, the dataset consists of labeled internet images. After that, vanilla CNNs had been trained using the created training dataset, and their performance was externally validated using public datasets such as Edinburgh and SNU datasets. In addition, using GAN technology, another synthetic dataset was generated and we also investigated the performance of the algorithm trained with the GAN images.
 
+### How to use ###
+
+<pre><code>
+python3 download.py
+</code></pre>
+
 ### Actinic keratosis ###
 
 ![img](https://github.com/whria78/can/blob/main/thumbnails/actinickeratosis.jpg?raw=true)
