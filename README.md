@@ -1,4 +1,4 @@
-## Clinical photographs Annotated for Neural network training (CAN10000) ##
+## Clinical photographs Annotated for Neural network training (CAN5000) ##
 
 As for the dermatology public datasets, the Edinburgh dataset, Asan test dataset, SNU subset, ISIC editorial, Fitzpatric 17k, DDI datasets are publicly available. A lot of images are also found on the internet atlas site and search engines. Convolutional neural network (CNN) architecture is commonly used for vision research, but most CNN uses only low-resolution images between 224x224 and 500x500 pixels due to the lack of GPU memory. For this reason, if the lesional area in a wide-field photograph is small, the characteristic image findings of the disease could not be identified in the resized photograph. Edinburgh, ASAN test, and SNU subset are curated datasets made up of only lesions, but in other datasets, the lesions are needed to be specified in this way to improve the performance of CNNs. However, this process requires a huge amount of time and effort by dermatologists called ‘data slaves’.
 
@@ -28,7 +28,7 @@ In an onychomycosis study, we detected nail plates in wide-field images, cropped
 
 Model dermatology is a classifier that can detect and classify general skin diseases. For diagnosing using only clinical photographs, the performance of the algorithm was comparable with that of specialists. By using region-based CNN, it is possible to detect nodular lesions and process a large number of photographs without the hard work of an annotator.
 
-CAN10000 is a dataset of 5000 training images for detecting melanoma and melanocytic nevus. We collected clinical photographs on the Internet. The limitation of this dataset is that it is annotated by the machine based on image findings. The proposed dataset is used as an additional training dataset along with the private dataset of hospitals. This dataset is not for validation or testing. Algorithms should be validated in the intended use setting, using the test dataset with clear ground truth.
+CAN5000 is a dataset of 5000 training images for detecting melanoma and melanocytic nevus. We collected clinical photographs on the Internet. The limitation of this dataset is that it is annotated by the machine based on image findings. The proposed dataset is used as an additional training dataset along with the private dataset of hospitals. This dataset is not for validation or testing. Algorithms should be validated in the intended use setting, using the test dataset with clear ground truth.
 
 ## Author ##
 Han Seung Seog (I Dermatology Clinic & IDerma, Inc)
