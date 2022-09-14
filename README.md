@@ -31,4 +31,4 @@ Model dermatology is a classifier that can detect and classify general skin dise
 CAN5000 is a dataset of 5000 training images for detecting melanoma and melanocytic nevus. We collected clinical photographs on the Internet. The limitation of this dataset is that it is annotated by the machine based on image findings. The proposed dataset is used as an additional training dataset along with the private dataset of hospitals. This dataset is not for validation or testing. Algorithms should be validated in the intended use setting, using the test dataset with clear ground truth.
 
 ## Author ##
-Han Seung Seog (I Dermatology Clinic & IDerma, Inc)
+Han Seung Seog
