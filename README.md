@@ -13,7 +13,7 @@ python3 download.py
 
 ![img](https://github.com/whria78/can/blob/main/thumbnails/malignantmelanoma.jpg?raw=true)
 
-### Melanocytic nevus ###
+### Other benign melanocytic lesions ###
 
 ![img](https://github.com/whria78/can/blob/main/thumbnails/melanocyticnevus.jpg?raw=true)
 
