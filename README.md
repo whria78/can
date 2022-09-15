@@ -1,4 +1,4 @@
-## Clinical photographs Annotated for Neural network training (CAN5000) ##
+## Clinical photographs Annotated by Neural networks (CAN5000) ##
 
 As for the dermatology public datasets, the Edinburgh dataset, Asan test dataset, SNU subset, ISIC editorial, Fitzpatric 17k, and DDI datasets are available and well-curated. Convolutional neural network (CNN) architecture is commonly used for vision research, but most CNN uses only low-resolution images between 224x224 and 500x500 pixels due to the lack of GPU memory. For this reason, if the lesional area in a wide-field photograph is small, the characteristic features of the disease could not be identified in the resized photograph. Edinburgh, ASAN test, and SNU subset are the datasets made up of only lesions, but in other datasets, the lesion is needed to be specified in this way to improve the performance of CNNs. However, this process requires a huge amount of time and effort by dermatologists called ‘Data Slave’.
 
