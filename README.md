@@ -30,7 +30,8 @@ In an onychomycosis study, we detected nail plates in wide-field images, cropped
 
 Model dermatology is a classifier that can detect and classify general skin diseases. For diagnosing using only clinical photographs, the performance of the algorithm was comparable with that of specialists. By using region-based CNN, it is possible to detect nodular lesions and process a large number of photographs without the hard work of an annotator.
 
-CAN5000 is a dataset of 5000 training images for detecting melanoma and melanocytic nevus. We collected clinical photographs on the Internet. The limitation of this dataset is that it is annotated by the machine based on image findings. The proposed dataset can be used as an additional training dataset along with the private dataset of hospitals. This dataset is not for validation or testing for the inaccurate ground truth and train-test contamination issue (i.e. internal validation shows meaningless exaggerated results). Algorithms should be validated using the test dataset with clear ground truth in the intended use setting.
+CAN5000 is a dataset of 5000 training images for the diagnosis of melanoma and melanocytic nevus. We collected clinical photographs on the Internet. The limitation of this dataset is that it is annotated by the machine based on image findings. The proposed dataset can be used as an additional training dataset along with the private dataset of hospitals. This dataset is not for validation or testing because of the inaccurate ground truth and train-test contamination issue (i.e. internal validation shows meaningless exaggerated results). Algorithms should be validated using the test dataset with clear ground truth in the intended use setting.
 
 ## Contributors ##
 Han Seung Seog
+Soo Ick Cho
