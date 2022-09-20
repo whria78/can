@@ -34,4 +34,5 @@ CAN5000 is a dataset of 5000 training images for the diagnosis of melanoma and m
 
 ## Contributors ##
 Han Seung Seog
-Soo Ick Cho
+
+Cho Soo Ick
