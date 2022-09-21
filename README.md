@@ -6,7 +6,8 @@ Numerous skin images can be also found on the internet atlas sites and through s
 
 ### How to use ###
 <pre><code>
-python3 download.py
+python3 download.py all_melanoma.csv
+python3 download.py all_nevus.csv
 </code></pre>
 
 ### Malignant melanoma ###
