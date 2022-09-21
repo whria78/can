@@ -9,7 +9,9 @@ import cv2
 import time
 
 img_info=[]
-f=open('url.csv','r',encoding='latin-1')
+csv_file=''
+if len(sys.argv)>1:csv_file=sys.argv[1]
+f=open(csv_file,'r',encoding='latin-1')
 no_=0
 while True:
     line=f.readline()
