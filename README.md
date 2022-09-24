@@ -10,7 +10,7 @@ Please check dependencies.
 <pre><code>pip install wget opencv-python numpy
 </code></pre>
 
-The script will download raw images and generate the dataset.
+The script will download raw images and generate the dataset. Some images may not available for the deletion of the link.
 <pre><code>python3 download.py all.csv
 
 or
