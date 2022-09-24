@@ -5,6 +5,13 @@ As for the dermatology public datasets, the Edinburgh dataset, Asan test dataset
 Numerous skin images can be also found on the internet atlas sites and through search engines. But it is impossible for dermatologists to annotate the images at lesinal or intralesional level. In this project, we created a dataset of 4,000 images for melanoma and melanocytic nevus by crawling photographs on the Internet and annotating them by an algorithm (Model Dermatology). Like the way of ImageNet, the dataset consists of labeled internet images. After that, vanilla CNNs had been trained using the created training dataset, and their performance was externally validated using public datasets such as Edinburgh and SNU datasets. 
 
 ### How to use ###
+
+Please check dependencies.
+<pre><code>
+pip install wget opencv-python numpy
+</code></pre>
+
+The script will download raw images and generate the dataset.
 <pre><code>
 python3 download.py all.csv
 
