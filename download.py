@@ -7,12 +7,13 @@ import concurrent.futures
 import numpy as np
 import cv2
 import time
+import wget
 
 img_info=[]
-csv_file=''
+csv_file='all.csv'
 if len(sys.argv)>1:csv_file=sys.argv[1]
-f=open(csv_file,'r',encoding='latin-1')
-no_=0
+f=open(csv_file,'r',encoding='utf-8')
+no_max=0
 while True:
     line=f.readline()
     if not line :break
@@ -22,15 +23,16 @@ while True:
 
     split_=line.strip().split(' ')
 
-    label_=split_[0]
-    x=float(split_[1])
-    y=float(split_[2])
-    w=float(split_[3])
-    h=float(split_[4])
-    url=split_[5]
+    no_=int(split_[0])
+    if no_max<no_:no_max=no_
+    label_=split_[1]
+    x=float(split_[2])
+    y=float(split_[3])
+    w=float(split_[4])
+    h=float(split_[5])
+    url=split_[6]
 
     img_info+=[(no_,label_,x,y,w,h,url)]
-    no_+=1    
 
 print("Total %d urls" % (len(img_info)))
 
@@ -38,24 +40,41 @@ print("Total %d urls" % (len(img_info)))
 dest_root=os.path.join(os.getcwd(),'dataset')
 try:os.makrdirs(dest_root)
 except:pass
-  
+
+def download_wget(image_url):
+    img_org=None
+    try:
+        img_path = wget.download(image_url)
+        img_org=cv2.imread(img_path,cv2.IMREAD_UNCHANGED)
+        os.remove(img_path)
+    except:
+        pass
+
+    return img_org
     
 def process_img(img_info_):
     no_,label_,x,y,w,h,image_url=img_info_
     time.sleep(0.1)
-    print("Processing : %d / %d" % (no_,len(img_info)))    
+    print("Processing : %d / %d" % (no_,no_max))    
 
+    img_org=None
     try:
         img_data = requests.get(image_url,stream=True,headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}).raw
-    except:
-        print("Failed : ",image_url)
-        return;
 
-    numpyarray = np.asarray(bytearray(img_data.read()), dtype=np.uint8)
-    img_org = cv2.imdecode(numpyarray, cv2.IMREAD_UNCHANGED)
+        numpyarray = np.asarray(bytearray(img_data.read()), dtype=np.uint8)
+        img_org = cv2.imdecode(numpyarray, cv2.IMREAD_UNCHANGED)
+
+        if img_org is None:
+            img_org=download_wget(image_url)
+
+    except:        
+        img_org=download_wget(image_url)
+
+
     if img_org is None:
         print("Failed : ",image_url)
         return;
+
 
     height,width,channel=img_org.shape
 
