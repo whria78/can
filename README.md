@@ -2,11 +2,15 @@
 
 As for the dermatology public datasets, the Edinburgh dataset, Asan test dataset, SNU subset, ISIC editorial, Fitzpatric 17k, and DDI datasets are available and well-curated. Convolutional neural network (CNN) architecture is commonly used for vision research, but most CNN uses only low-resolution images between 224x224 and 500x500 pixels due to the limited size of GPU memory. For this reason, if the lesional area in a wide-field photograph were small, the characteristic features of the disease could not be identified in the resized photograph. Edinburgh, ASAN test, and SNU subset are the datasets made up of only lesions, but in other datasets, the lesion is needed to be specified in this way to improve the performance of CNNs. However, this process requires a huge amount of time and effort by dermatologists called ‘Data Slave’.
 
-Numerous skin images can be also found on the internet atlas sites and through search engines. But it is impossible for dermatologists to annotate the images at lesinal or intralesional level. In this project, we created a dataset of 5,000 images for melanoma and melanocytic nevus by crawling photographs on the Internet and annotating them by an algorithm (Model Dermatology). Like the way of ImageNet, the dataset consists of labeled internet images. After that, vanilla CNNs had been trained using the created training dataset, and their performance was externally validated using public datasets such as Edinburgh and SNU datasets. 
+Numerous skin images can be also found on the internet atlas sites and through search engines. But it is impossible for dermatologists to annotate the images at lesinal or intralesional level. In this project, we created a dataset of 4,000 images for melanoma and melanocytic nevus by crawling photographs on the Internet and annotating them by an algorithm (Model Dermatology). Like the way of ImageNet, the dataset consists of labeled internet images. After that, vanilla CNNs had been trained using the created training dataset, and their performance was externally validated using public datasets such as Edinburgh and SNU datasets. 
 
 ### How to use ###
 <pre><code>
 python3 download.py all.csv
+
+or
+
+python3 download.py
 </code></pre>
 
 ### Malignant melanoma ###
@@ -24,17 +28,31 @@ Clinical photographs in Dermatology are the most readily available image, howeve
 
 The photographs of biopsied cases in appropriate lighting and background is ideal for diagnosis, but most clinical photographs we encounter are not ideal. The problem is that algorithms that are not trained on diverse pictures show poor performance on untrained out-of-distributions (OOD) presented by users. The OOD is not merely limited to untrained diseases. If it is trained solely with pictures that are in focus, the performance of the algorithm may be poor for pictures that are out of focus. Although neural networks in vision research have human-level performance in classifying the images with unified composition, the performance dropped significantly on the photographs with diverse compositions as shown in the ObjectNet study. 
 
-Unlike the objects of ImageNet and ObjectNet, the ground truth of skin disorders is hard to be determined and there is an inter-observers variation which is greater than we usually expect. For the problem of (a) Unclear ground truth, (b) limitation of lesional resolution, and (c) diverse OODs, it may be impossible to train an algorithm with non-standardized wide-field photographs. In my perspective, the quality of the image should be at least that of mammogram for accurate diganosis. 
+Unlike the objects of ImageNet and ObjectNet, the ground truth of skin disorders is hard to be determined and there is an inter-observers variation that is greater than we usually expect. For the problem of (a) Unclear ground truth, (b) limitation of the lesional resolution, and (c) diverse OODs, it may be impossible to train an algorithm with non-standardized wide-field photographs. In my perspective, the quality of the image should be at least that of mammogram for accurate diagnosis. 
 
-CAN4000 is a dataset of about 4000 training images that consists of melanoma and melanocytic nevus. We collected clinical photographs on the Internet and, we used the detection method (RCNN). Although CNN was robust to massive label noise, the performance of CNN dropped markedly if the size of training image of each class was less than 1000 [https://arxiv.org/pdf/1705.10694.pdf; Figure 10]. It implies that a large number of data is needed for CNN training, even if it is inaccurate. In addition, in this dataset, we tried to include lesion areas that well reflect the characteristics of the disease. 
+CAN4000 is a dataset of about 4000 training images that consists of melanoma and melanocytic nevus. We collected clinical photographs on the Internet and, we used the detection method (RCNN). Although CNN was robust to massive label noise, the performance of CNN dropped markedly if the size of the training image of each class was less than 1000 [https://arxiv.org/pdf/1705.10694.pdf; Figure 10]. It implies that a large number of data is needed for CNN training, even if it is inaccurate. In addition, in this dataset, we tried to include lesion areas that well reflect the characteristics of the disease. 
 
 In an onychomycosis study, we detected nail plates in wide-field images, cropped the lesional areas, and annotated them to create a large dataset. Even using the training dataset annotated solely by the algorithm, the algorithm trained with the synthetic onychomycosis dataset showed an expert-level performance in the reader test. The proposed method has the advantage of obtaining a dataset with the same disease prevalence whereas the image dataset in hospitals usually consists of specific diseases according to the dermatologist’s interest.
 
-Model Dermatology (ModelDerm) is a classifier that can detect and classify general skin diseases. For diagnosing using only clinical photographs, the performance of the algorithm was comparable with that of specialists. By using region-based CNN, it is possible to detect nodular lesions and process a large number of photographs without the hard work of an annotator. Using the image crawler (https://github.com/whria78/skinimagecrawler), 500k raw images were collected. Using the detection and classification module of the ModelDerm, 5809 potential images of melanoma and nevus were extracted. After one Dermatologist examined and excluded inappropriate photographs, a total of 4456 images were finally selected. 
+Model Dermatology (ModelDerm) is a classifier that can detect and classify general skin diseases. For diagnosing using only clinical photographs, the performance of the algorithm was comparable with that of specialists. By using region-based CNN, it is possible to detect nodular lesions and process a large number of photographs without the hard work of an annotator. Using the image crawler (https://github.com/whria78/skinimagecrawler), 500k raw images were collected. Using the detection and classification module of the ModelDerm, 5,809 potential crops of melanoma and nevus were extracted. After one Dermatologist examined and excluded inappropriate photographs, a total of 4,456 image crops were finally selected. 
 
-The limitation of this dataset is that it is annotated by the machine based on image findings. The proposed dataset can be used as an additional training dataset along with the private dataset of hospitals. This dataset is not for validation or testing because of the inaccurate ground truth and train-test contamination issue (i.e. internal validation shows meaningless exaggerated results). Algorithms should be validated using the test dataset with clear ground truth in the intended use setting.
+The limitation of this dataset is that it is annotated by the machine based on image findings. The proposed dataset can be used as an additional training dataset along with the private dataset of hospitals. This dataset is not for validation or testing because of the inaccurate ground truth. Algorithms should be validated using the test dataset with clear ground truth in the intended use setting. Second, different crops from the same image were included, which means that there is a train-test contamination issue. Internal validation shows meaningless exaggerated results. 
+
+
+Most curated dataset were compiled with human-centric annotation. The ideal dataset is one that is annotated at a level that teaches babies according to their intended use. Because CNN does not have a common sense, machine-centric annotation may be required. Because retrospective promising results on well curated datasets are often difficult to be reproduced in the real-world setting, data scientists should make efforts to improve the algorithm while repeating training and deploying (e.g. https://github.com/whria78/data-in-paper-out).
+
+
+## Zipped Archive ##
+
+The Dropbox link (275MB) is temporalily available.
+
+https://www.dropbox.com/s/n52y0uqh0063uqt/CAN_4456.tar?dl=0
+
 
 ## Contributors ##
-Han Seung Seog
+Seung Seog Han
 
-Cho Soo Ick
+Soo ick Cho
+
+Cristian navarrete-dechent
+
