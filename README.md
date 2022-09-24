@@ -7,13 +7,11 @@ Numerous skin images can be also found on the internet atlas sites and through s
 ### How to use ###
 
 Please check dependencies.
-<pre><code>
-pip install wget opencv-python numpy
+<pre><code>pip install wget opencv-python numpy
 </code></pre>
 
 The script will download raw images and generate the dataset.
-<pre><code>
-python3 download.py all.csv
+<pre><code>python3 download.py all.csv
 
 or
 
