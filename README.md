@@ -57,7 +57,7 @@ https://www.dropbox.com/s/n52y0uqh0063uqt/CAN_4456.tar?dl=0
 ## Contributors ##
 Seung Seog Han
 
-Soo ick Cho
+Soo Ick Cho
 
-Cristian navarrete-dechent
+Cristian Navarrete-dechent
 
