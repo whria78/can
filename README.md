@@ -54,6 +54,12 @@ The Dropbox link (275MB) is temporalily available.
 https://www.dropbox.com/s/n52y0uqh0063uqt/CAN_4456.tar?dl=0
 
 
+## Deployment of the Custom Algorithm ##
+
+We released a simple training and web deployment code for testing in the real-world setting.
+https://github.com/whria78/data-in-paper-out
+
+
 ## Contributors ##
 Seung Seog Han
 
