@@ -44,7 +44,7 @@ Model Dermatology (ModelDerm; https://modelderm.com) is a classifier that can de
 The limitation of this dataset is that it is annotated by the machine based on image findings. The proposed dataset can be used as an additional training dataset along with the private dataset of hospitals. This dataset is not for validation or testing because of the inaccurate ground truth. Algorithms should be validated using the test dataset with clear ground truth in the intended use setting. Second, different crops from the same image were included, which means that there is a train-test contamination issue. Internal validation shows meaningless exaggerated results. 
 
 
-Most curated dataset were compiled with human-centric annotation. The ideal dataset is one that is annotated at a level that teaches babies according to their intended use. Because CNN does not have a common sense, machine-centric annotation may be required. Because retrospective promising results on well curated datasets are often difficult to be reproduced in the real-world setting, data scientists should make efforts to improve the algorithm while repeating training and deploying (e.g. https://github.com/whria78/data-in-paper-out).
+Most curated dataset were compiled with human-centric annotation. The ideal dataset is one that is annotated at a level that teaches babies according to their intended use. Because CNN does not have a common sense, machine-centric annotation may be required. Because retrospective promising results on well curated datasets are often difficult to be reproduced in the real-world setting, data scientists should make efforts to collect and revise the data while repeating training and deployment (https://github.com/whria78/data-in-paper-out).
 
 
 ## Zipped Archive ##
