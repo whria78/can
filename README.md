@@ -63,23 +63,18 @@ https://github.com/whria78/data-in-paper-out
 ## Other Dermatology Dataset (published by us) ##
 
 SNU Test dataset (general disorders; 240 images)
-
 https://figshare.com/articles/dataset/SNU_SNU_MELANOMA_and_Reddit_dataset_Quiz/6454973
 
 Asan Test dataset (10 nodular disorders; 1,276 Asan + 152 Hallym images)
-
 https://figshare.com/articles/software/Caffemodel_files_and_Python_Examples/5406223
 
 Model Onychomycosis (onychomycosis, nail dystrophy; 1,358 images)
-
 https://figshare.com/articles/dataset/Model_Onychomycosis_Training_Datasets_JPG_thumbnails_and_Validation_Datasets_JPG_images_/5398573?file=9302506
 
 Model Onychomycosis, Virtual dataset (6 nail disorders; 3,317 images)
-
 https://figshare.com/articles/dataset/Virtual_E_Dataset/5513407
 
 RD Dataset (Reddit melanoma community images; 1,282 images)
-
 https://figshare.com/articles/dataset/RD_Dataset/15170853
 
 
