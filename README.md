@@ -60,6 +60,50 @@ We released a simple training and web deployment code for testing in the real-wo
 https://github.com/whria78/data-in-paper-out
 
 
+## Other Dermatology Dataset (published by us) ##
+
+SNU Test dataset (general disorders; 240 images)
+https://figshare.com/articles/dataset/SNU_SNU_MELANOMA_and_Reddit_dataset_Quiz/6454973
+
+Asan Test dataset (10 nodular disorders; 1,276 Asan + 152 Hallym images)
+https://figshare.com/articles/software/Caffemodel_files_and_Python_Examples/5406223
+
+Model Onychomycosis (onychomycosis, nail dystrophy; 1,358 images)
+https://figshare.com/articles/dataset/Model_Onychomycosis_Training_Datasets_JPG_thumbnails_and_Validation_Datasets_JPG_images_/5398573?file=9302506
+
+Model Onychomycosis, Virtual dataset (6 nail disorders; 3,317 images)
+https://figshare.com/articles/dataset/Virtual_E_Dataset/5513407
+
+RD Dataset (Reddit melanoma community images; 1,282 images)
+https://figshare.com/articles/dataset/RD_Dataset/15170853
+
+
+## Other Dermatology Dataset ##
+
+Edinburgh Dermofit (10 nodular disorders; 1,300 images)
+https://licensing.edinburgh-innovations.ed.ac.uk/product/dermofit-image-library
+
+MED-NODE (melanoma and nevus; 170 images)
+https://www.cs.rug.nl/~imaging/databases/melanoma_naevi/
+
+SD-198 (general disorders; 6,584 images)
+https://xiaoxiaosun.com/docs/2016-eccv-sd198.pdf
+cf) DermQuest, Galderma
+
+Diverse Dermatology Images (general disorders; 656 images)
+https://ddi-dataset.github.io/
+
+SKINCON (general disorders; 3,230 images)
+https://skincon-dataset.github.io/
+
+Fitzpatrick 17k (general disorders; 16,577 images)
+https://github.com/mattgroh/fitzpatrick17k
+cf) https://www.dermaamin.com/site/  http://atlasdermatologico.com.br/
+
+7-point criteria evaluation database (melanoma and melanocytic disorders; 2,045 images)
+https://derm.cs.sfu.ca/Welcome.html
+
+
 ## Contributors ##
 Seung Seog Han
 
