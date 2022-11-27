@@ -1,4 +1,4 @@
-## Clinical photographs Annotated by Neural networks (CAN dataset) ##
+## Clinical photographs Annotated by Neural networks (CAN5600 and CAN2000 dataset) ##
 
 As for the dermatology public datasets, the Edinburgh dataset, Asan test dataset, SNU subset, ISIC editorial, Fitzpatric 17k, and DDI datasets are available and well-curated. Convolutional neural network (CNN) architecture is commonly used for vision research, but most CNN uses only low-resolution images between 224x224 and 500x500 pixels due to the limited size of GPU memory. For this reason, if the lesional area in a wide-field photograph were small, the characteristic features of the disease could not be identified in the resized photograph. Edinburgh, ASAN test, and SNU subset are the datasets made up of only lesions, but in other datasets, the lesion is needed to be specified in this way to improve the performance of CNNs. However, this process requires a huge amount of time and effort by dermatologists called ‘Data Slave’.
 
@@ -15,11 +15,11 @@ The script will download raw images and generate the dataset. Some images may no
 
 or
 
-python3 download.py  CAN2000.csv
+python3 download.py CAN2000.csv
 
 or
 
-python3 download.py  LESION130k.csv
+python3 download.py LESION130k.csv
 </code></pre>
 
 ### Malignant melanoma ###
