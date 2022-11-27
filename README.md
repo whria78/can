@@ -2,7 +2,7 @@
 
 As for the dermatology public datasets, the Edinburgh dataset, Asan test dataset, SNU subset, ISIC editorial, Fitzpatric 17k, and DDI datasets are available and well-curated. Convolutional neural network (CNN) architecture is commonly used for vision research, but most CNN uses only low-resolution images between 224x224 and 500x500 pixels due to the limited size of GPU memory. For this reason, if the lesional area in a wide-field photograph were small, the characteristic features of the disease could not be identified in the resized photograph. Edinburgh, ASAN test, and SNU subset are the datasets made up of only lesions, but in other datasets, the lesion is needed to be specified in this way to improve the performance of CNNs. However, this process requires a huge amount of time and effort by dermatologists called ‘Data Slave’.
 
-Numerous skin images can be also found on the internet atlas sites and through search engines. But it is impossible for dermatologists to annotate the images at lesinal or intralesional level. In this project, we created a dataset of 4,000 images for melanoma and melanocytic nevus by crawling photographs on the Internet and annotating them by an algorithm (Model Dermatology). Like the way of ImageNet, the dataset consists of labeled internet images. After that, vanilla CNNs had been trained using the created training dataset, and their performance was externally validated using public datasets such as Edinburgh and SNU datasets. 
+Numerous skin images can be also found on the internet atlas sites and through search engines. But it is impossible for dermatologists to annotate the images at lesinal or intralesional level. In this project, we created a dataset of 5,600 images for melanoma and melanocytic nevus by crawling photographs on the Internet and annotating them by an algorithm (Model Dermatology). Like the way of ImageNet, the dataset consists of labeled internet images. After that, vanilla CNNs had been trained using the created training dataset, and their performance was externally validated using public datasets such as Edinburgh and SNU datasets. 
 
 ### How to use ###
 
@@ -11,11 +11,15 @@ Please check dependencies.
 </code></pre>
 
 The script will download raw images and generate the dataset. Some images may not available for the deletion of the link.
-<pre><code>python3 download.py all.csv
+<pre><code>python3 download.py CAN5600.csv
 
 or
 
-python3 download.py
+python3 download.py  CAN2000.csv
+
+or
+
+python3 download.py  LESION130k.csv
 </code></pre>
 
 ### Malignant melanoma ###
@@ -35,7 +39,7 @@ The photographs of biopsied cases in appropriate lighting and background is idea
 
 Unlike the objects of ImageNet and ObjectNet, the ground truth of skin disorders is hard to be determined and there is an inter-observers variation that is greater than we usually expect. For the problem of (a) Unclear ground truth, (b) limitation of the lesional resolution, and (c) diverse OODs, it may be impossible to train an algorithm with non-standardized wide-field photographs. In my perspective, the quality of the image should be at least that of mammogram for accurate diagnosis. 
 
-CAN4000 is a dataset of about 4000 training images that consists of melanoma and melanocytic nevus. We collected clinical photographs on the Internet and, we used the detection method (RCNN). Although CNN was robust to massive label noise, the performance of CNN dropped markedly if the size of the training image of each class was less than 1000 [https://arxiv.org/pdf/1705.10694.pdf; Figure 10]. It implies that a large number of data is needed for CNN training, even if it is inaccurate. In addition, in this dataset, we tried to include lesion areas that well reflect the characteristics of the disease. 
+CAN4000 is a dataset of about 5600 training images that consists of melanoma and melanocytic nevus. We collected clinical photographs on the Internet and, we used the detection method (RCNN). Although CNN was robust to massive label noise, the performance of CNN dropped markedly if the size of the training image of each class was less than 1000 [https://arxiv.org/pdf/1705.10694.pdf; Figure 10]. It implies that a large number of data is needed for CNN training, even if it is inaccurate. In addition, in this dataset, we tried to include lesion areas that well reflect the characteristics of the disease. 
 
 In an onychomycosis study, we detected nail plates in wide-field images, cropped the lesional areas, and annotated them to create a large dataset. Even using the training dataset annotated solely by the algorithm, the algorithm trained with the synthetic onychomycosis dataset showed an expert-level performance in the reader test. The proposed method has the advantage of obtaining a dataset with the same disease prevalence whereas the image dataset in hospitals usually consists of specific diseases according to the dermatologist’s interest.
 
@@ -49,9 +53,7 @@ Most curated dataset were compiled with human-centric annotation. The ideal data
 
 ## Zipped Archive ##
 
-The Dropbox link (275MB) is temporalily available.
-
-https://www.dropbox.com/s/n52y0uqh0063uqt/CAN_4456.tar?dl=0
+This repository contains only the download URLs of datasets. The zipped archived can be requested by email (whria78@gmail.com)
 
 
 ## Deployment of the Custom Algorithm ##
@@ -80,6 +82,10 @@ https://figshare.com/articles/dataset/RD_Dataset/15170853
 
 ## Other Dermatology Dataset ##
 
+PAD-UFES-20 (6 tumorous disorders; 2,298  images)
+https://data.mendeley.com/datasets/zr7vgbcyr2/1
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7479321/
+
 Edinburgh Dermofit (10 nodular disorders; 1,300 images)
 https://licensing.edinburgh-innovations.ed.ac.uk/product/dermofit-image-library
 
@@ -102,6 +108,12 @@ cf) https://www.dermaamin.com/site/  http://atlasdermatologico.com.br/
 
 7-point criteria evaluation database (melanoma and melanocytic disorders; 2,045 images)
 https://derm.cs.sfu.ca/Welcome.html
+
+Skin Cancer Detection dataset of university of Waterloo
+https://uwaterloo.ca/vision-image-processing-lab/research-demos/skin-cancer-detection
+
+SKINL2 dataset (light field dataset of skin lesions)
+https://www.it.pt/AutomaticPage?id=3459
 
 
 ## Contributors ##
