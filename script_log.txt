@@ -1,0 +1,24 @@
+#PRETRAIN - General Skin Disorders
+python3 train.py --outdir=/training-runs --data=/DATA/GAN500k_high --mirror=1 --gpus=2 --gamma=8.2 --cfg=stylegan2 --batch=16 --batch-gpu=8 --map-depth=2 --glr=0.003 --dlr=0.003 --resume=ffhq512.pkl --kimg=10000 --snap=10 
+
+#GAN5000 - MEL
+python3 train.py --outdir=/training-runs --data=/DATA/GAN2000_mel512 --mirror=1 --gpus=1 --gamma=32 --cfg=stylegan2 --kimg=500 --snap=1 --map-depth=2 --batch=16 --batch-gpu=8 --glr=0.003 --dlr=0.003 --resume=c10000.pkl --freezed=13
+
+#GAN5000 - NEVUS
+python3 train.py --outdir=/home/ai/nvme/training-runs2 --data=/home/ai/nvme/GAN2000_n512 --mirror=1 --gpus=1 --gamma=32 --cfg=stylegan2 --kimg=500 --snap=1 --map-depth=2 --batch=16 --batch-gpu=8 --glr=0.003 --dlr=0.003 --resume=c10000.pkl --freezed=13
+
+#ALL for MORPHING
+python3 train.py --outdir=/home/ai/nvme/training-runs2 --data=/home/ai/nvme/GAN2000_512 --mirror=1 --gpus=2 --gamma=32 --cfg=stylegan2 --kimg=500 --snap=1 --map-depth=2 --batch=32 --batch-gpu=8 --glr=0.003 --dlr=0.003 --resume=c10000.pkl --freezed=13; 
+
+#GENERATION IMGS - General Skin Disorders
+python3 gen_images.py --network=/home/ai/nvme/training-runs2/c10000.pkl --seeds=0-9999 --outdir=/home/ai/8TB5/G10000/c10000
+
+#GENERATION IMGS - Melanoma & Nevus
+python3 gen_images.py --network=/home/ai/nvme/training-runs2/n500_noaug.pkl --seeds=0-9999 --outdir=/home/ai/8TB5/G10000/n500_noaug;
+python3 gen_images.py --network=/home/ai/nvme/training-runs2/m500_noaug.pkl --seeds=0-9999 --outdir=/home/ai/8TB5/G10000/m500_noaug
+
+#MORPHING
+python3 projector.py --save-video 0 --num-steps 1000 --outdir=out_source_0513 --target=seed0513.jpg --network=mn500.pkl
+python3 projector.py --save-video 0 --num-steps 1000 --outdir=out_source_1119 --target=seed1119.jpg --network=mn500.pkl
+python3 morph_final.py --network=mn500.pkl --source=./out_source_0513/projected_w.npz --target=./out_source_1119/projected_w.npz
+

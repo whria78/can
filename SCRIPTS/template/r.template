@@ -1,0 +1,11 @@
+#install.packages("xlsx");
+#install.packages("pROC");
+
+library(pROC);library(xlsx);data <- read.xlsx("[XLS_PATH]", 1,startRow=1,header=TRUE);
+rocobj<-roc(data$dx,data$pred);auc(rocobj);ci(rocobj);
+
+rocobj2<-plot.roc(data$dx,data$pred,percent=TRUE,col="#304D63",main="TEST = [TEST_NO_IMAGES] images");
+legend("bottomright", legend=c("Algorithm"), col=c("#304D63"), lwd=c(2),pch=c(""));
+
+ciobj <-ci.se(rocobj2,specificities=seq(0,100,0.5));
+plot(ciobj,type="shape",col="#1c61b6AA");
