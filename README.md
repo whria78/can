@@ -109,13 +109,23 @@ python3 morph_final.py --network=mn500.pkl --source=/out_source_0513/projected_w
 
 ```
 
-## 4. Deployment Tool for the Custom Algorithm ##
+## 3. Training CNN Models ##
+
+```.bash
+# Training a EfficientLite0 with GAN5000 & Testing with SNU dataset
+python3 train.py --model efficientnet --opt radam --batch 64 --epoch 30 --lr 0.001 --train DATA/GAN5000 --test DATA/snu --result log.txt
+
+# Running all test configurations
+python3 run_all.py
+```
+
+## Deployment Tool for the Custom Algorithm ##
 
 We released a simple training and web deployment code for testing in the real-world setting.
 https://github.com/whria78/data-in-paper-out
 
 
-## 5. List of Dermatology Datasets (Clinical Photographs) ##
+## List of Dermatology Datasets (Clinical Photographs) ##
 
 SNU Test dataset (general disorders; 240 images)
 https://figshare.com/articles/dataset/SNU_SNU_MELANOMA_and_Reddit_dataset_Quiz/6454973
@@ -166,4 +176,4 @@ SKINL2 dataset (light field dataset of skin lesions)
 https://www.it.pt/AutomaticPage?id=3459
 
 
-## 6. Citation ##
+## Citation ##
