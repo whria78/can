@@ -1,10 +1,10 @@
 ## Clinical photographs Annotated by Neural networks (CAN5600 and CAN2000 dataset) ##
 
-![img](https://github.com/whria78/can/blob/main/thumbnails/malignantmelanoma.jpg?raw=true)
+![img](https://github.com/whria78/can/blob/main/thumbnails/melanoma_nevus.jpg?raw=true)
 
 The lesion is needed to be specified in this way to improve the performance of CNNs. However, this process requires a huge amount of time and effort by dermatologists called ‘Data Slave’. In this project, we created a dataset of 5,619 images for melanoma and melanocytic nevus by crawling photographs on the Internet and annotating them by an algorithm (Model Dermatology). Like the way of ImageNet, this dataset consists of labeled internet images. 
 
-### Download CAN5600 / CAN2000 / LESION130k datasets ###
+### 1. Download CAN5600 / CAN2000 / LESION130k datasets ###
 
 Please check dependencies.
 <pre><code>pip install wget opencv-python numpy
@@ -25,7 +25,7 @@ python3 download.py LESION130k.csv
 cf) This repository contains only the download URLs of datasets. The zipped archived can be requested by email (whria78@gmail.com)
 
 
-### Download Public Datasets ###
+### 2. Download Public Datasets ###
 
 PAD-UFES-20 (6 tumorous disorders; 2,298  images)
 https://data.mendeley.com/datasets/zr7vgbcyr2/1
@@ -47,7 +47,7 @@ https://licensing.edinburgh-innovations.ed.ac.uk/product/dermofit-image-library
 cf) The subset of SNU and ASAN test datasets are included in this repository.
 
 
-### Training Parameters ###
+### 3. Training Parameters ###
 
 ## (A) Training for the Pretrain GAN Model of General Skin Disorders ##
 
@@ -78,13 +78,13 @@ python3 projector.py --save-video 0 --num-steps 1000 --outdir=out_source_1119 --
 python3 morph_final.py --network=mn500.pkl --source=./out_source_0513/projected_w.npz --target=./out_source_1119/projected_w.npz
 
 
-### Deployment Tool for the Custom Algorithm ###
+### 4. Deployment Tool for the Custom Algorithm ###
 
 We released a simple training and web deployment code for testing in the real-world setting.
 https://github.com/whria78/data-in-paper-out
 
 
-### Dermatology Datasets (Clinical Photographs) ###
+### 5. List of Dermatology Datasets (Clinical Photographs) ###
 
 SNU Test dataset (general disorders; 240 images)
 https://figshare.com/articles/dataset/SNU_SNU_MELANOMA_and_Reddit_dataset_Quiz/6454973
@@ -135,4 +135,4 @@ SKINL2 dataset (light field dataset of skin lesions)
 https://www.it.pt/AutomaticPage?id=3459
 
 
-### Citation ###
+### 6. Citation ###
