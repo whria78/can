@@ -19,7 +19,7 @@ python3 download.py CAN5600.csv
 python3 download.py CAN2000.csv
 # LESION130k
 python3 download.py LESION130k.csv
-</code></pre>
+```
 
 cf) This repository contains only the download URLs of datasets. The zipped archived can be requested by email (whria78@gmail.com)
 
@@ -83,7 +83,7 @@ python3 projector.py --save-video 0 --num-steps 1000 --outdir=out_source_1119 --
 # Get the morphing images.
 python3 morph_final.py --network=mn500.pkl --source=./out_source_0513/projected_w.npz --target=./out_source_1119/projected_w.npz
 
-</code></pre>
+```
 
 ### 4. Deployment Tool for the Custom Algorithm ###
 
