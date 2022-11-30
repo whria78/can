@@ -65,7 +65,7 @@ https://licensing.edinburgh-innovations.ed.ac.uk/product/dermofit-image-library
 cf) The subset of SNU and ASAN test datasets are included in this repository.
 
 
-## 3. Training Parameters ##
+## 3. Training GAN Models ##
 
 Consecutive synthetic images (GAN5000) and the trained GAN Models: https://doi.org/10.6084/m9.figshare.21507189
 For the GAN training, StyleGAN2-ADA configuration in the StyleGAN3 was used (https://github.com/NVlabs/stylegan3).
