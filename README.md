@@ -7,11 +7,12 @@ The lesion is needed to be specified in this way to improve the performance of C
 ### 1. Download CAN5600 / CAN2000 / LESION130k datasets ###
 
 Please check dependencies.
-<pre><code>pip install wget opencv-python numpy
-</code></pre>
+```.bash
+pip install wget opencv-python numpy
+```
 
 The script will download raw images and generate the dataset. Some images may not available for the deletion of the link.
-<pre><code>
+```.bash
 # CAN5600
 python3 download.py CAN5600.csv
 # CAN2000
@@ -50,7 +51,7 @@ cf) The subset of SNU and ASAN test datasets are included in this repository.
 For the GAN training, StyleGAN2-ADA configuration in the StyleGAN3 was used (https://github.com/NVlabs/stylegan3).
 
 
-<pre><code>
+```.bash
 #Scaled down 512x512 resolution using dataset_tool.py 
 python dataset_tool.py --source=/DATA/LESION130k --dest=/DATA/LESION130k_512 --resolution=512x512
 python dataset_tool.py --source=/DATA/CAN2000/malignantmelanoma --dest=/DATA/CAN2000_mel512 --resolution=512x512
