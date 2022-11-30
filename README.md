@@ -9,15 +9,15 @@ The lesion is needed to be specified in this way to improve the performance of C
 | Path | Description
 | :--- | :----------
 | [Main](https://github.com/whria78/can/) | Main directory
-| &ensp;&ensp;&boxvr;&nbsp; [DATASET](https://github.com/whria78/can/DATASET) | Dataset
+| &ensp;&ensp;&boxvr;&nbsp; [DATASET](https://github.com/whria78/can/tree/main/DATASET) | Dataset
 | &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; CAN2000.csv | CAN2000 dataset (URL, crop location)
 | &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; CAN5600.csv | CAN5600 dataset (URL, crop location)
 | &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; LESION130k.csv | LESION130k dataset (URL, crop location)
 | &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; download.py | Download script
-| &ensp;&ensp;&boxvr;&nbsp; [SCRIPTS](https://github.com/whria78/can/SCRIPTS) | Script
-| &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; [DATA](https://github.com/whria78/can/SCRIPTS/DATA) | Training and Test datasets
-| &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; [out_source_0513](https://github.com/whria78/can/SCRIPTS/out_source_0513) | An example of projecting images to latent space (nevus; seed0513).
-| &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; [out_source_1119](https://github.com/whria78/can/SCRIPTS/out_source_1119) | An example of projecting images to latent space (melanoma; seed1119).
+| &ensp;&ensp;&boxvr;&nbsp; [SCRIPTS](https://github.com/whria78/can/tree/main/SCRIPTS) | Script
+| &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; [DATA](https://github.com/whria78/can/tree/main/SCRIPTS/DATA) | Training and Test datasets
+| &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; [out_source_0513](https://github.com/whria78/can/tree/main/SCRIPTS/out_source_0513) | An example of projecting images to latent space (nevus; seed0513).
+| &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; [out_source_1119](https://github.com/whria78/can/tree/main/SCRIPTS/out_source_1119) | An example of projecting images to latent space (melanoma; seed1119).
 | &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; morph.py | Morphing script
 | &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; project.py | project.py of STYLEGAN2-ADA-PYTORCH
 | &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; run_all.py | Running all configurations (Training EfficientNet and Testing)
