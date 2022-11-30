@@ -17,11 +17,11 @@ The lesion is needed to be specified in this way to improve the performance of C
 | &ensp;&ensp;&boxvr;&nbsp; [SCRIPTS](https://github.com/whria78/can/tree/main/SCRIPTS) | Script
 | &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; [DATA](https://github.com/whria78/can/tree/main/SCRIPTS/DATA) | Training and Test datasets
 
-| &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; [asantest](https://github.com/whria78/can/tree/main/SCRIPTS/DATA/asantest) | Asan test dataset
-| &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; [snu](https://github.com/whria78/can/tree/main/SCRIPTS/DATA/snu) | subset of SNU dataset
-| &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; [gan2000](https://github.com/whria78/can/tree/main/SCRIPTS/DATA/gan2000) | GAN2000
-| &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; [gan5000](https://github.com/whria78/can/tree/main/SCRIPTS/DATA/gan5000) | GAN5000
-| &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; [gan5600](https://github.com/whria78/can/tree/main/SCRIPTS/DATA/gan5600) | GAN5600
+| &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; [asantest](https://github.com/whria78/can/tree/main/SCRIPTS/DATA/asantest) | Asan test dataset
+| &ensp;&ensp;&ensp;&boxvr;&nbsp; [snu](https://github.com/whria78/can/tree/main/SCRIPTS/DATA/snu) | subset of SNU dataset
+| &ensp;&ensp;&ensp;&boxvr;&nbsp; [gan2000](https://github.com/whria78/can/tree/main/SCRIPTS/DATA/gan2000) | GAN2000
+| &ensp;&ensp;&ensp;&boxvr;&nbsp; [gan5000](https://github.com/whria78/can/tree/main/SCRIPTS/DATA/gan5000) | GAN5000
+| &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; [gan5600](https://github.com/whria78/can/tree/main/SCRIPTS/DATA/gan5600) | GAN5600
 
 | &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; [out_source_0513](https://github.com/whria78/can/tree/main/SCRIPTS/out_source_0513) | An example of projecting images to latent space (nevus; seed0513).
 | &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; [out_source_1119](https://github.com/whria78/can/tree/main/SCRIPTS/out_source_1119) | An example of projecting images to latent space (melanoma; seed1119).
