@@ -11,14 +11,12 @@ Please check dependencies.
 </code></pre>
 
 The script will download raw images and generate the dataset. Some images may not available for the deletion of the link.
-<pre><code>python3 download.py CAN5600.csv
-
-or
-
+<pre><code>
+# CAN5600
+python3 download.py CAN5600.csv
+# CAN2000
 python3 download.py CAN2000.csv
-
-or
-
+# LESION130k
 python3 download.py LESION130k.csv
 </code></pre>
 
