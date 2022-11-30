@@ -16,14 +16,14 @@ The lesion is needed to be specified in this way to improve the performance of C
 | &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; download.py | Download script
 | &ensp;&ensp;&boxvr;&nbsp; [SCRIPTS](https://github.com/whria78/can/SCRIPTS) | Script
 | &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; [DATA](https://github.com/whria78/can/SCRIPTS/DATA) | Training and Test datasets
-| &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; [DATA](https://github.com/whria78/can/SCRIPTS/out_source_0513) | An example of projecting images to latent space (nevus; seed0513).
-| &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; [DATA](https://github.com/whria78/can/SCRIPTS/out_source_1119) | An example of projecting images to latent space (melanoma; seed1119).
+| &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; [out_source_0513](https://github.com/whria78/can/SCRIPTS/out_source_0513) | An example of projecting images to latent space (nevus; seed0513).
+| &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; [out_source_1119](https://github.com/whria78/can/SCRIPTS/out_source_1119) | An example of projecting images to latent space (melanoma; seed1119).
 | &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; morph.py | Morphing script
 | &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; project.py | project.py of STYLEGAN2-ADA-PYTORCH
 | &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; run_all.py | Running all configurations
 | &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; train.py | Training script
 
-### 1. Download CAN5600 / CAN2000 / LESION130k datasets ###
+## 1. Download CAN5600 / CAN2000 / LESION130k datasets ##
 
 Please check dependencies.
 ```.bash
@@ -43,7 +43,7 @@ python3 download.py LESION130k.csv
 cf) This repository contains only the download URLs of datasets. The zipped archived can be requested by email (whria78@gmail.com)
 
 
-### 2. Download Public Datasets ###
+## 2. Download Public Datasets ##
 
 PAD-UFES-20 (6 tumorous disorders; 2,298  images)
 https://data.mendeley.com/datasets/zr7vgbcyr2/1
@@ -65,7 +65,7 @@ https://licensing.edinburgh-innovations.ed.ac.uk/product/dermofit-image-library
 cf) The subset of SNU and ASAN test datasets are included in this repository.
 
 
-### 3. Training Parameters ###
+## 3. Training Parameters ##
 
 For the GAN training, StyleGAN2-ADA configuration in the StyleGAN3 was used (https://github.com/NVlabs/stylegan3).
 
@@ -109,13 +109,13 @@ python3 morph_final.py --network=mn500.pkl --source=./out_source_0513/projected_
 
 ```
 
-### 4. Deployment Tool for the Custom Algorithm ###
+## 4. Deployment Tool for the Custom Algorithm ##
 
 We released a simple training and web deployment code for testing in the real-world setting.
 https://github.com/whria78/data-in-paper-out
 
 
-### 5. List of Dermatology Datasets (Clinical Photographs) ###
+## 5. List of Dermatology Datasets (Clinical Photographs) ##
 
 SNU Test dataset (general disorders; 240 images)
 https://figshare.com/articles/dataset/SNU_SNU_MELANOMA_and_Reddit_dataset_Quiz/6454973
@@ -166,4 +166,4 @@ SKINL2 dataset (light field dataset of skin lesions)
 https://www.it.pt/AutomaticPage?id=3459
 
 
-### 6. Citation ###
+## 6. Citation ##
