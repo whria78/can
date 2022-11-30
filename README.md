@@ -97,10 +97,10 @@ python3 gen_images.py --network=/training-runs/n500.pkl --seeds=0-2500 --outdir=
 
 
 # Training for Morphing
-# To get the morphing images, we used the project.py in the StyleGAN2-ADA (https://github.com/NVlabs/stylegan2-ada-pytorch/blob/main/projector.py).
 python3 train.py --outdir=/training-runs --data=/DATA/CAN2000_512 --mirror=1 --gpus=2 --gamma=32 --cfg=stylegan2 --kimg=500 --snap=1 --map-depth=2 --batch=32 --batch-gpu=8 --glr=0.003 --dlr=0.003 --resume=c10000.pkl --freezed=13; 
 
 # Projecting images to latent space.
+# To get the morphing images, we used the project.py in the StyleGAN2-ADA (https://github.com/NVlabs/stylegan2-ada-pytorch/blob/main/projector.py).
 python3 projector.py --save-video 0 --num-steps 1000 --outdir=out_source_0513 --target=seed0513.jpg --network=mn500.pkl
 python3 projector.py --save-video 0 --num-steps 1000 --outdir=out_source_1119 --target=seed1119.jpg --network=mn500.pkl
 
