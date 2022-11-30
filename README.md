@@ -21,7 +21,7 @@ The lesion is needed to be specified in this way to improve the performance of C
 | &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; morph.py | Morphing script
 | &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; project.py | project.py of STYLEGAN2-ADA-PYTORCH
 | &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; run_all.py | Running all configurations
-| &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; train.py | Training script
+| &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; train.py | Training EfficientNet & Testing with various datasets
 
 ## 1. Download CAN5600 / CAN2000 / LESION130k datasets ##
 
