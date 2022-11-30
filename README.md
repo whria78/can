@@ -49,14 +49,14 @@ cf) The subset of SNU and ASAN test datasets are included in this repository.
 
 ### 3. Training Parameters ###
 
-## (A) Training for the Pretrain GAN Model of General Skin Disorders ##
+## a) Training for the Pretrain GAN Model of General Skin Disorders ##
 
 python3 train.py --outdir=/training-runs --data=/DATA/GAN500k_high --mirror=1 --gpus=2 --gamma=8.2 --cfg=stylegan2 --batch=16 --batch-gpu=8 --map-depth=2 --glr=0.003 --dlr=0.003 --resume=ffhq512.pkl --kimg=10000 --snap=10 
 
 python3 gen_images.py --network=./training-runs/c10000.pkl --seeds=0-9999 --outdir=./c10000
 
 
-## (B) Training for GAN5000 ##
+## b) Training for GAN5000 ##
 
 python3 train.py --outdir=/training-runs --data=/DATA/CAN2000_mel512 --mirror=1 --gpus=1 --gamma=32 --cfg=stylegan2 --kimg=500 --snap=1 --map-depth=2 --batch=16 --batch-gpu=8 --glr=0.003 --dlr=0.003 --resume=c10000.pkl --freezed=13
 
@@ -67,7 +67,7 @@ python3 train.py --outdir=./training-runs --data=/DATA/CAN2000_n512 --mirror=1 -
 python3 gen_images.py --network=./training-runs/n500.pkl --seeds=0-2500 --outdir=./GAN5000/melanocyticnevus
 
 
-## (C) Training for Morphing ##
+## c) Training for Morphing ##
 
 python3 train.py --outdir=./training-runs --data=/DATA/CAN2000_512 --mirror=1 --gpus=2 --gamma=32 --cfg=stylegan2 --kimg=500 --snap=1 --map-depth=2 --batch=32 --batch-gpu=8 --glr=0.003 --dlr=0.003 --resume=c10000.pkl --freezed=13; 
 
