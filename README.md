@@ -2,7 +2,7 @@
 
 ![img](https://github.com/whria78/can/blob/main/thumbnails/melanoma_nevus.jpg?raw=true)
 
-The lesion is needed to be specified in this way to improve the performance of CNNs. However, this process requires a huge amount of time and effort by dermatologists called ‘Data Slave’. In this project, we created a dataset of 5,619 images for melanoma and melanocytic nevus by crawling photographs on the Internet and annotating them by an algorithm (Model Dermatology). Like the way of ImageNet, this dataset consists of labeled internet images. 
+The lesion is needed to be specified in this way to improve the performance of CNNs. However, this process requires a huge amount of time and effort by dermatologists called ‘Data Slave’. In this project, we created a dataset of 5,619 images for melanoma and melanocytic nevus by crawling photographs on the Internet and annotating them by an algorithm (Model Dermatology; https://modelderm.com). Like the way of ImageNet, this dataset consists of labeled internet images. 
 
 ## Data repository
 
@@ -25,6 +25,8 @@ The lesion is needed to be specified in this way to improve the performance of C
 
 ## 1. Download CAN5600 / CAN2000 / LESION130k datasets ##
 
+This repository contains only the download URLs of datasets. The zipped archived can be requested by email (whria78@gmail.com)
+
 Please check dependencies.
 ```.bash
 pip install wget opencv-python numpy
@@ -39,8 +41,6 @@ python3 download.py CAN2000.csv
 # LESION130k
 python3 download.py LESION130k.csv
 ```
-
-cf) This repository contains only the download URLs of datasets. The zipped archived can be requested by email (whria78@gmail.com)
 
 
 ## 2. Download Public Datasets ##
@@ -67,8 +67,8 @@ cf) The subset of SNU and ASAN test datasets are included in this repository.
 
 ## 3. Training Parameters ##
 
+Consecutive synthetic images (GAN5000) and the trained GAN Models: https://doi.org/10.6084/m9.figshare.21507189
 For the GAN training, StyleGAN2-ADA configuration in the StyleGAN3 was used (https://github.com/NVlabs/stylegan3).
-
 
 ```.bash
 # Data Preparation
