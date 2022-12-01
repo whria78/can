@@ -185,6 +185,3 @@ https://uwaterloo.ca/vision-image-processing-lab/research-demos/skin-cancer-dete
 
 SKINL2 dataset (light field dataset of skin lesions)
 https://www.it.pt/AutomaticPage?id=3459
-
-
-## Citation ##
