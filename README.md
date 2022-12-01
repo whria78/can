@@ -72,37 +72,36 @@ cf) The subset of SNU and ASAN test datasets are included in this repository.
 
 ## 3. Training GAN Models ##
 
-Consecutive synthetic images (GAN5000) and the trained GAN Models: https://doi.org/10.6084/m9.figshare.21507189
 For the GAN training, StyleGAN2-ADA configuration in the StyleGAN3 was used (https://github.com/NVlabs/stylegan3).
 
 ```.bash
 # Data Preparation
 # Scaled down 512x512 resolution using dataset_tool.py 
-python3 dataset_tool.py --source=DATA/LESION130k --dest=DATA/LESION130k_512 --resolution=512x512
-python3 dataset_tool.py --source=DATA/CAN2000/malignantmelanoma --dest=DATA/CAN2000_mel512 --resolution=512x512
-python3 dataset_tool.py --source=DATA/CAN2000/melanocyticnevus --dest=DATA/CAN2000_n512 --resolution=512x512
-python3 dataset_tool.py --source=DATA/CAN2000 --dest=DATA/CAN2000_512 --resolution=512x512
+python3 dataset_tool.py --source=[DATA/LESION130k] --dest=[DATA/LESION130k_512] --resolution=512x512
+python3 dataset_tool.py --source=[DATA/CAN2000/malignantmelanoma] --dest=[DATA/CAN2000_mel512] --resolution=512x512
+python3 dataset_tool.py --source=[DATA/CAN2000/melanocyticnevus] --dest=[DATA/CAN2000_n512] --resolution=512x512
+python3 dataset_tool.py --source=[DATA/CAN2000] --dest=[DATA/CAN2000_512] --resolution=512x512
 
 
 # Pretrain
 # Training for the Pretrain GAN Model of General Skin Disorders
-python3 train.py --outdir=training-runs --data=DATA/LESION130k_512 --mirror=1 --gpus=2 --gamma=8.2 --cfg=stylegan2 --batch=16 --batch-gpu=8 --map-depth=2 --glr=0.003 --dlr=0.003 --resume=ffhq512.pkl --kimg=10000 --snap=10 
+python3 train.py --outdir=training-runs --data=[DATA/LESION130k_512] --mirror=1 --gpus=2 --gamma=8.2 --cfg=stylegan2 --batch=16 --batch-gpu=8 --map-depth=2 --glr=0.003 --dlr=0.003 --resume=ffhq512.pkl --kimg=10000 --snap=10 
 
-python3 gen_images.py --network=training-runs/c10000.pkl --seeds=0-9999 --outdir=c10000
+python3 gen_images.py --network=c10000.pkl --seeds=0-9999 --outdir=c10000
 
 
 # Training and Generating GAN5000 dataset
-python3 train.py --outdir=training-runs --data=DATA/CAN2000_mel512 --mirror=1 --gpus=1 --gamma=32 --cfg=stylegan2 --kimg=500 --snap=1 --map-depth=2 --batch=16 --batch-gpu=8 --glr=0.003 --dlr=0.003 --resume=c10000.pkl --freezed=13
+python3 train.py --outdir=training-runs --data=[DATA/CAN2000_mel512] --mirror=1 --gpus=1 --gamma=32 --cfg=stylegan2 --kimg=500 --snap=1 --map-depth=2 --batch=16 --batch-gpu=8 --glr=0.003 --dlr=0.003 --resume=c10000.pkl --freezed=13
 
-python3 gen_images.py --network=training-runs/m500.pkl --seeds=0-2500 --outdir=GAN5000/malignantmelanoma
+python3 gen_images.py --network=m500.pkl --seeds=0-2500 --outdir=[GAN5000/malignantmelanoma]
 
-python3 train.py --outdir=training-runs --data=DATA/CAN2000_n512 --mirror=1 --gpus=1 --gamma=32 --cfg=stylegan2 --kimg=500 --snap=1 --map-depth=2 --batch=16 --batch-gpu=8 --glr=0.003 --dlr=0.003 --resume=c10000.pkl --freezed=13
+python3 train.py --outdir=training-runs --data=[DATA/CAN2000_n512] --mirror=1 --gpus=1 --gamma=32 --cfg=stylegan2 --kimg=500 --snap=1 --map-depth=2 --batch=16 --batch-gpu=8 --glr=0.003 --dlr=0.003 --resume=c10000.pkl --freezed=13
 
-python3 gen_images.py --network=training-runs/n500.pkl --seeds=0-2500 --outdir=GAN5000/melanocyticnevus
+python3 gen_images.py --network=n500.pkl --seeds=0-2500 --outdir=[GAN5000/melanocyticnevus]
 
 
 # Training for Morphing
-python3 train.py --outdir=training-runs --data=DATA/CAN2000_512 --mirror=1 --gpus=2 --gamma=32 --cfg=stylegan2 --kimg=500 --snap=1 --map-depth=2 --batch=32 --batch-gpu=8 --glr=0.003 --dlr=0.003 --resume=c10000.pkl --freezed=13; 
+python3 train.py --outdir=training-runs --data=[DATA/CAN2000_512] --mirror=1 --gpus=2 --gamma=32 --cfg=stylegan2 --kimg=500 --snap=1 --map-depth=2 --batch=32 --batch-gpu=8 --glr=0.003 --dlr=0.003 --resume=c10000.pkl --freezed=13; 
 
 # Projecting images to latent space.
 # To get the morphing images, we used the project.py in the StyleGAN2-ADA (https://github.com/NVlabs/stylegan2-ada-pytorch/blob/main/projector.py).
@@ -114,13 +113,19 @@ python3 morph_final.py --network=mn500.pkl --source=out_source_0513/projected_w.
 
 ```
 
+Trained GAN Models are available at https://doi.org/10.6084/m9.figshare.21507189
+
+
 ## 3. Training CNN Models ##
 
 ```.bash
-# Training a EfficientLite0 with GAN5000 & Testing with SNU dataset
-python3 train.py --model efficientnet --opt radam --batch 64 --epoch 30 --lr 0.001 --train DATA/GAN5000 --test DATA/snu --result log.txt
+# An example of training a EfficientLite0 with GAN5000 & Testing with SNU dataset
+python3 train.py --model efficientnet --opt radam --batch 64 --epoch 30 --lr 0.001 --train [DATA/GAN5000] --test [DATA/snu] --result log.txt
 
-# Running all test configurations
+# An example of running all test configurations
+# Please check the test folders - [DATA/asan], [DATA/snu], [DATA/pad], [DATA/seven], [DATA/water], [DATA/edin], [DATA/mednode]
+# Edinburgh dataset [DATA/edin] is a commercial dataset.
+# All images should be squared off with cropped edges.
 python3 run_all.py
 ```
 
