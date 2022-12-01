@@ -119,9 +119,7 @@ Trained GAN Models are available at https://doi.org/10.6084/m9.figshare.21507189
 ## 3. Training CNN Models ##
 
 Please check the test folders - [DATA/asan], [DATA/snu], [DATA/pad], [DATA/seven], [DATA/water], [DATA/edin], [DATA/mednode]
-
 Edinburgh dataset [DATA/edin] is a commercial dataset.
-
 All images should be squared off with cropped edges.
 
 ```.bash
