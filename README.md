@@ -109,7 +109,7 @@ python3 projector.py --save-video 0 --num-steps 1000 --outdir=out_source_0513 --
 python3 projector.py --save-video 0 --num-steps 1000 --outdir=out_source_1119 --target=seed1119.jpg --network=mn500.pkl
 
 # Generating the morphing images.
-python3 morph_final.py --network=mn500.pkl --source=out_source_0513/projected_w.npz --target=out_source_1119/projected_w.npz
+python3 morph.py --network=mn500.pkl --source=out_source_0513/projected_w.npz --target=out_source_1119/projected_w.npz
 
 ```
 
