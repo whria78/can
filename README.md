@@ -129,7 +129,7 @@ All images should be squared off with cropped edges.
 python3 train.py --model efficientnet --opt radam --batch 64 --epoch 30 --lr 0.001 --train [DATA/GAN5000] --test [DATA/snu] --result log.txt
 
 # An example of running all test configurations
-python3 run_all.py
+python3 run_all.py --result_file log.txt
 ```
 
 ## Deployment Tool for the Custom Algorithm ##
