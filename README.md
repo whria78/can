@@ -132,11 +132,12 @@ Edinburgh dataset [DATA/edin] is a commercial dataset
 All images should be squared off with cropped edges.
 
 ```.bash
-# An example of training a EfficientLite0 with GAN5000 & Testing with SNU dataset
+# An example of training a Efficient-Lite0 with GAN5000 & Testing with SNU dataset
 # python3 [LINUX] / python [WINDOWS] 
 python3 train.py --model efficientnet --opt radam --batch 64 --epoch 30 --lr 0.001 --train [DATA/GAN5000] --test [DATA/snu] --result log.txt
 
 # An example of running all test configurations
+# Please add Edinburgh dataset [DATA/edin] manually. Edinburgh dataset is a commecial dataset.
 python3 run_all.py --result_file log.txt
 ```
 
