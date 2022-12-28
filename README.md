@@ -41,10 +41,16 @@ The script will download raw images and generate the dataset. Some images may no
 ```.bash
 # CAN5600
 python3 download.py CAN5600.csv
+or
+python download.py CAN5600.csv
 # CAN2000
 python3 download.py CAN2000.csv
+or
+python download.py CAN2000.csv
 # LESION130k
 python3 download.py LESION130k.csv
+or
+python download.py LESION130k.csv
 ```
 
 
@@ -76,7 +82,8 @@ For the GAN training, StyleGAN2-ADA configuration in the StyleGAN3 was used (htt
 
 ```.bash
 # Data Preparation
-# Scaled down 512x512 resolution using dataset_tool.py 
+# Scaled down 512x512 resolution using dataset_tool.py
+# python3 [LINUX] / python [WINDOWS] 
 python3 dataset_tool.py --source=[DATA/LESION130k] --dest=[DATA/LESION130k_512] --resolution=512x512
 python3 dataset_tool.py --source=[DATA/CAN2000/malignantmelanoma] --dest=[DATA/CAN2000_mel512] --resolution=512x512
 python3 dataset_tool.py --source=[DATA/CAN2000/melanocyticnevus] --dest=[DATA/CAN2000_n512] --resolution=512x512
@@ -126,6 +133,7 @@ All images should be squared off with cropped edges.
 
 ```.bash
 # An example of training a EfficientLite0 with GAN5000 & Testing with SNU dataset
+# python3 [LINUX] / python [WINDOWS] 
 python3 train.py --model efficientnet --opt radam --batch 64 --epoch 30 --lr 0.001 --train [DATA/GAN5000] --test [DATA/snu] --result log.txt
 
 # An example of running all test configurations
