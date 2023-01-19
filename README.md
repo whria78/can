@@ -62,12 +62,12 @@ MED-NODE (melanoma and nevus; 170 images; https://www.cs.rug.nl/~imaging/databas
 
 7-point criteria evaluation database (melanoma and melanocytic disorders; 2,045 images; https://derm.cs.sfu.ca/Welcome.html)
 
-Skin Cancer Detection dataset of university of Waterloo; https://uwaterloo.ca/vision-image-processing-lab/research-demos/skin-cancer-detection)
+Skin Cancer Detection dataset of university of Waterloo (https://uwaterloo.ca/vision-image-processing-lab/research-demos/skin-cancer-detection)
 
 Edinburgh Dermofit [Commercial] (10 nodular disorders; 1,300 images; https://licensing.edinburgh-innovations.ed.ac.uk/product/dermofit-image-library)
 
 
-cf) The subset of SNU and ASAN test datasets are included in this repository.
+cf) The subset of SNU and ASAN test datasets are included in this git.
 
 
 ## 3. Training GAN Models ##
@@ -121,7 +121,7 @@ Trained GAN Models are available at https://doi.org/10.6084/m9.figshare.21507189
 
 Please check the test folders - [DATA/asan], [DATA/snu], [DATA/pad], [DATA/seven], [DATA/water], [DATA/edin], [DATA/mednode]
 
-Edinburgh dataset [DATA/edin] is a commercial dataset
+cf) Edinburgh dataset [DATA/edin] is a commercial dataset
 
 All images should be squared off with cropped edges.
 
@@ -175,5 +175,8 @@ cf) https://www.dermaamin.com/site/  http://atlasdermatologico.com.br/
 Skin Cancer Detection dataset of university of Waterloo (https://uwaterloo.ca/vision-image-processing-lab/research-demos/skin-cancer-detection)
 
 SKINL2 dataset (light field dataset of skin lesions; https://www.it.pt/AutomaticPage?id=3459
+
+## License
+MIT license
 
 ## Citation
