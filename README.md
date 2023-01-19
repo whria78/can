@@ -143,40 +143,40 @@ https://github.com/whria78/data-in-paper-out
 
 ## List of Dermatology Datasets (Clinical Photographs) ##
 
-SNU Test dataset (general disorders; 240 images; https://figshare.com/articles/dataset/SNU_SNU_MELANOMA_and_Reddit_dataset_Quiz/6454973)
+- SNU Test dataset (general disorders; 240 images; https://figshare.com/articles/dataset/SNU_SNU_MELANOMA_and_Reddit_dataset_Quiz/6454973)
 
-Asan Test dataset (10 nodular disorders; 1,276 Asan + 152 Hallym images; https://figshare.com/articles/software/Caffemodel_files_and_Python_Examples/5406223)
+- Asan Test dataset (10 nodular disorders; 1,276 Asan + 152 Hallym images; https://figshare.com/articles/software/Caffemodel_files_and_Python_Examples/5406223)
 
-Model Onychomycosis (onychomycosis, nail dystrophy; 1,358 images; https://figshare.com/articles/dataset/Model_Onychomycosis_Training_Datasets_JPG_thumbnails_and_Validation_Datasets_JPG_images_/5398573?file=9302506)
+- Model Onychomycosis (onychomycosis, nail dystrophy; 1,358 images; https://figshare.com/articles/dataset/Model_Onychomycosis_Training_Datasets_JPG_thumbnails_and_Validation_Datasets_JPG_images_/5398573?file=9302506)
 
-Model Onychomycosis, Virtual dataset (6 nail disorders; 3,317 images; https://figshare.com/articles/dataset/Virtual_E_Dataset/5513407)
+- Model Onychomycosis, Virtual dataset (6 nail disorders; 3,317 images; https://figshare.com/articles/dataset/Virtual_E_Dataset/5513407)
 
-RD Dataset (Reddit melanoma community images; 1,282 images; https://figshare.com/articles/dataset/RD_Dataset/15170853)
+- RD Dataset (Reddit melanoma community images; 1,282 images; https://figshare.com/articles/dataset/RD_Dataset/15170853)
 
-PAD-UFES-20 (6 tumorous disorders; 2,298  images; https://data.mendeley.com/datasets/zr7vgbcyr2/1
+- PAD-UFES-20 (6 tumorous disorders; 2,298  images; https://data.mendeley.com/datasets/zr7vgbcyr2/1
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7479321/)
 
-Edinburgh Dermofit [Commercial] (10 nodular disorders; 1,300 images; https://licensing.edinburgh-innovations.ed.ac.uk/product/dermofit-image-library)
+- Edinburgh Dermofit [Commercial] (10 nodular disorders; 1,300 images; https://licensing.edinburgh-innovations.ed.ac.uk/product/dermofit-image-library)
 
-MED-NODE (melanoma and nevus; 170 images; https://www.cs.rug.nl/~imaging/databases/melanoma_naevi/)
+- MED-NODE (melanoma and nevus; 170 images; https://www.cs.rug.nl/~imaging/databases/melanoma_naevi/)
 
-SD-198 (general disorders; 6,584 images; https://xiaoxiaosun.com/docs/2016-eccv-sd198.pdf)
+- SD-198 (general disorders; 6,584 images; https://xiaoxiaosun.com/docs/2016-eccv-sd198.pdf)
 
 cf) DermQuest, Galderma
 
-Diverse Dermatology Images (general disorders; 656 images; https://ddi-dataset.github.io/)
+- Diverse Dermatology Images (general disorders; 656 images; https://ddi-dataset.github.io/)
 
-SKINCON (general disorders; 3,230 images; https://skincon-dataset.github.io/)
+- SKINCON (general disorders; 3,230 images; https://skincon-dataset.github.io/)
 
-Fitzpatrick 17k (general disorders; 16,577 images; https://github.com/mattgroh/fitzpatrick17k)
+- Fitzpatrick 17k (general disorders; 16,577 images; https://github.com/mattgroh/fitzpatrick17k)
 
 cf) https://www.dermaamin.com/site/  http://atlasdermatologico.com.br/
 
-7-point criteria evaluation database (melanoma and melanocytic disorders; 2,045 images; https://derm.cs.sfu.ca/Welcome.html)
+- 7-point criteria evaluation database (melanoma and melanocytic disorders; 2,045 images; https://derm.cs.sfu.ca/Welcome.html)
 
-Skin Cancer Detection dataset of university of Waterloo (https://uwaterloo.ca/vision-image-processing-lab/research-demos/skin-cancer-detection)
+- Skin Cancer Detection dataset of university of Waterloo (https://uwaterloo.ca/vision-image-processing-lab/research-demos/skin-cancer-detection)
 
-SKINL2 dataset (light field dataset of skin lesions; https://www.it.pt/AutomaticPage?id=3459)
+- SKINL2 dataset (light field dataset of skin lesions; https://www.it.pt/AutomaticPage?id=3459)
 
 ## License
 MIT license
