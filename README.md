@@ -2,7 +2,7 @@
 
 ![img](https://github.com/whria78/can/blob/main/thumbnails/melanoma_nevus.jpg?raw=true)
 
-The lesion is needed to be specified in this way to improve the performance of CNNs. However, this process requires a huge amount of time and effort by dermatologists called ‘Data Slave’. In this project, we created a dataset of 5,619 images for melanoma and melanocytic nevus by crawling photographs on the Internet and annotating them by an algorithm (Model Dermatology; https://modelderm.com). Like the way of ImageNet, this dataset consists of labeled internet images. 
+The lesion is needed to be specified in this way to improve the performance of CNNs. However, this process requires a huge amount of time and effort by dermatologists called ‘Data Slave’. In this project, we created a dataset of 5,619 images for melanoma and melanocytic nevus by crawling photographs on the Internet and annotating them by an algorithm (Model Dermatology Build2021; https://modelderm.com). Like the way of ImageNet, this dataset consists of labeled internet images. 
 
 ## Data repository
 
@@ -56,18 +56,17 @@ python download.py LESION130k.csv
 
 ## 2. Download Public Datasets ##
 
-PAD-UFES-20 (6 tumorous disorders; 2,298  images; https://data.mendeley.com/datasets/zr7vgbcyr2/1; https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7479321/)
+- PAD-UFES-20 (6 tumorous disorders; 2,298  images; https://data.mendeley.com/datasets/zr7vgbcyr2/1; https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7479321/)
 
-MED-NODE (melanoma and nevus; 170 images; https://www.cs.rug.nl/~imaging/databases/melanoma_naevi/)
+- MED-NODE (melanoma and nevus; 170 images; https://www.cs.rug.nl/~imaging/databases/melanoma_naevi/)
 
-7-point criteria evaluation database (melanoma and melanocytic disorders; 2,045 images; https://derm.cs.sfu.ca/Welcome.html)
+- 7-point criteria evaluation database (melanoma and melanocytic disorders; 2,045 images; https://derm.cs.sfu.ca/Welcome.html)
 
-Skin Cancer Detection dataset of university of Waterloo (https://uwaterloo.ca/vision-image-processing-lab/research-demos/skin-cancer-detection)
+- Skin Cancer Detection dataset of university of Waterloo (https://uwaterloo.ca/vision-image-processing-lab/research-demos/skin-cancer-detection)
 
-Edinburgh Dermofit [Commercial] (10 nodular disorders; 1,300 images; https://licensing.edinburgh-innovations.ed.ac.uk/product/dermofit-image-library)
+- Edinburgh Dermofit [Commercial] (10 nodular disorders; 1,300 images; https://licensing.edinburgh-innovations.ed.ac.uk/product/dermofit-image-library)
 
-
-cf) The subset of SNU and ASAN test datasets are included in this git.
+- The subset of SNU and ASAN test datasets are included in this git.
 
 
 ## 3. Training GAN Models ##
@@ -115,7 +114,7 @@ python3 morph.py --network=mn500.pkl --source=out_source_0513/projected_w.npz --
 ```
 
 Trained GAN Models are available at https://doi.org/10.6084/m9.figshare.21507189
-
+Please check this tutorial for the detail of morphing: https://www.youtube.com/watch?v=J2nTo0cYVBk
 
 ## 3. Training CNN Models ##
 
