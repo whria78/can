@@ -161,6 +161,7 @@ Edinburgh Dermofit [Commercial] (10 nodular disorders; 1,300 images; https://lic
 MED-NODE (melanoma and nevus; 170 images; https://www.cs.rug.nl/~imaging/databases/melanoma_naevi/)
 
 SD-198 (general disorders; 6,584 images; https://xiaoxiaosun.com/docs/2016-eccv-sd198.pdf)
+
 cf) DermQuest, Galderma
 
 Diverse Dermatology Images (general disorders; 656 images; https://ddi-dataset.github.io/)
@@ -168,15 +169,17 @@ Diverse Dermatology Images (general disorders; 656 images; https://ddi-dataset.g
 SKINCON (general disorders; 3,230 images; https://skincon-dataset.github.io/)
 
 Fitzpatrick 17k (general disorders; 16,577 images; https://github.com/mattgroh/fitzpatrick17k)
+
 cf) https://www.dermaamin.com/site/  http://atlasdermatologico.com.br/
 
 7-point criteria evaluation database (melanoma and melanocytic disorders; 2,045 images; https://derm.cs.sfu.ca/Welcome.html)
 
 Skin Cancer Detection dataset of university of Waterloo (https://uwaterloo.ca/vision-image-processing-lab/research-demos/skin-cancer-detection)
 
-SKINL2 dataset (light field dataset of skin lesions; https://www.it.pt/AutomaticPage?id=3459
+SKINL2 dataset (light field dataset of skin lesions; https://www.it.pt/AutomaticPage?id=3459)
 
 ## License
 MIT license
 
 ## Citation
+Under review
