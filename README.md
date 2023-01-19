@@ -76,7 +76,8 @@ For the GAN training, StyleGAN2-ADA configuration in the StyleGAN3 was used (htt
 
 ```.bash
 # Data Preparation
-# Scaled down 512x512 resolution using dataset_tool.py (https://github.com/NVlabs/stylegan3/blob/main/dataset_tool.py)
+# Scaled down 512x512 resolution using dataset_tool.py
+# https://github.com/NVlabs/stylegan3/blob/main/dataset_tool.py
 # python3 [LINUX] / python [WINDOWS] 
 python3 dataset_tool.py --source=[DATA/LESION130k] --dest=[DATA/LESION130k_512] --resolution=512x512
 python3 dataset_tool.py --source=[DATA/CAN2000/malignantmelanoma] --dest=[DATA/CAN2000_mel512] --resolution=512x512
