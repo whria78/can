@@ -39,6 +39,7 @@ pip install wget opencv-python numpy
 
 The script will download raw images and generate the dataset. Some images may not available for the deletion of the link.
 ```.bash
+# python3 [LINUX] / python [WINDOWS] 
 # CAN5600
 python3 download.py CAN5600.csv
 or
