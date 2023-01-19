@@ -114,6 +114,7 @@ python3 morph.py --network=mn500.pkl --source=out_source_0513/projected_w.npz --
 ```
 
 Trained GAN Models are available at https://doi.org/10.6084/m9.figshare.21507189
+
 Please check this tutorial for the detail of morphing: https://www.youtube.com/watch?v=J2nTo0cYVBk
 
 ## 3. Training CNN Models ##
@@ -161,7 +162,7 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7479321/)
 
 - SD-198 (general disorders; 6,584 images; https://xiaoxiaosun.com/docs/2016-eccv-sd198.pdf)
 
-	cf) DermQuest, Galderma
+	cf) DermQuest, Galderma (website closed)
 
 - Diverse Dermatology Images (general disorders; 656 images; https://ddi-dataset.github.io/)
 
@@ -173,7 +174,9 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7479321/)
 
 - 7-point criteria evaluation database (melanoma and melanocytic disorders; 2,045 images; https://derm.cs.sfu.ca/Welcome.html)
 
-- Skin Cancer Detection dataset of university of Waterloo (https://uwaterloo.ca/vision-image-processing-lab/research-demos/skin-cancer-detection)
+- Skin Cancer Detection dataset of university of Waterloo (melanoma and nevus; https://uwaterloo.ca/vision-image-processing-lab/research-demos/skin-cancer-detection)
+
+	cf) DermQuest, Galderma (website closed), http://www.dermis.net
 
 - SKINL2 dataset (light field dataset of skin lesions; https://www.it.pt/AutomaticPage?id=3459)
 
