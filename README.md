@@ -76,7 +76,7 @@ For the GAN training, StyleGAN2-ADA configuration in the StyleGAN3 was used (htt
 
 ```.bash
 # Data Preparation
-# Scaled down 512x512 resolution using dataset_tool.py
+# Scaled down 512x512 resolution using dataset_tool.py (https://github.com/NVlabs/stylegan3/blob/main/dataset_tool.py)
 # python3 [LINUX] / python [WINDOWS] 
 python3 dataset_tool.py --source=[DATA/LESION130k] --dest=[DATA/LESION130k_512] --resolution=512x512
 python3 dataset_tool.py --source=[DATA/CAN2000/malignantmelanoma] --dest=[DATA/CAN2000_mel512] --resolution=512x512
@@ -86,8 +86,10 @@ python3 dataset_tool.py --source=[DATA/CAN2000] --dest=[DATA/CAN2000_512] --reso
 
 # Pretrain
 # Training for the Pretrain GAN Model of General Skin Disorders
+# https://github.com/NVlabs/stylegan3/blob/main/train.py
 python3 train.py --outdir=training-runs --data=[DATA/LESION130k_512] --mirror=1 --gpus=2 --gamma=8.2 --cfg=stylegan2 --batch=16 --batch-gpu=8 --map-depth=2 --glr=0.003 --dlr=0.003 --resume=ffhq512.pkl --kimg=10000 --snap=10 
 
+# https://github.com/NVlabs/stylegan3/blob/main/gen_images.py
 python3 gen_images.py --network=c10000.pkl --seeds=0-9999 --outdir=c10000
 
 
@@ -105,11 +107,13 @@ python3 gen_images.py --network=n500.pkl --seeds=0-2500 --outdir=[GAN5000/melano
 python3 train.py --outdir=training-runs --data=[DATA/CAN2000_512] --mirror=1 --gpus=2 --gamma=32 --cfg=stylegan2 --kimg=500 --snap=1 --map-depth=2 --batch=32 --batch-gpu=8 --glr=0.003 --dlr=0.003 --resume=c10000.pkl --freezed=13; 
 
 # Projecting images to latent space.
-# To get the morphed images, we used the project.py in the StyleGAN2-ADA (https://github.com/NVlabs/stylegan2-ada-pytorch/blob/main/projector.py).
+# To get the morphed images, we used the project.py in the StyleGAN2-ADA.
+# https://github.com/NVlabs/stylegan2-ada-pytorch/blob/main/projector.py
 python3 projector.py --save-video 0 --num-steps 1000 --outdir=out_source_0513 --target=seed0513.jpg --network=mn500.pkl
 python3 projector.py --save-video 0 --num-steps 1000 --outdir=out_source_1119 --target=seed1119.jpg --network=mn500.pkl
 
 # Generating the morphed images.
+# https://github.com/whria78/can/blob/main/SCRIPTS/morph.py
 python3 morph.py --network=mn500.pkl --source=out_source_0513/projected_w.npz --target=out_source_1119/projected_w.npz
 
 ```
@@ -133,6 +137,7 @@ python3 train.py --model efficientnet --opt radam --batch 64 --epoch 30 --lr 0.0
 
 # An example of running all test configurations
 # Please add Edinburgh dataset [DATA/edin] manually. Edinburgh dataset is a commecial dataset.
+# https://github.com/whria78/can/blob/main/SCRIPTS/run_all.py
 python3 run_all.py --result_file log.txt
 ```
 
