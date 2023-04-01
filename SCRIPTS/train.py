@@ -2,6 +2,32 @@
 #Han Seung Seog (whria78@gmail.com)
 #https://modelderm.com
 
+# sudo pip3 install scikit-learn scipy matplotlib torch_optimizer openpyxl 
+
+def calculate_metrics(predicted, actual):
+    tp = 0
+    fp = 0
+    tn = 0
+    fn = 0
+    
+    for i in range(len(predicted)):
+        if predicted[i] == 1 and actual[i] == 1:
+            tp += 1
+        elif predicted[i] == 1 and actual[i] == 0:
+            fp += 1
+        elif predicted[i] == 0 and actual[i] == 0:
+            tn += 1
+        elif predicted[i] == 0 and actual[i] == 1:
+            fn += 1
+            
+    accuracy = (tp + tn) / (tp + tn + fp + fn)
+    ppv = tp / (tp + fp)
+    npv = tn / (tn + fn)
+    sensitivity = tp / (tp + fn)
+    specificity = tn / (tn + fp)
+    
+    return accuracy, ppv, npv, sensitivity, specificity
+
 def main():
     import os
     import torch
@@ -11,6 +37,7 @@ def main():
     import argparse
     import time
     import timm
+    from datetime import datetime
 
     #parse arguments
     parser = argparse.ArgumentParser(description='An example of CNN training and deployment; Han Seung Seog')
@@ -20,7 +47,6 @@ def main():
     parser.add_argument('--epoch', type=int, default=6, help='number of epochs to train (6 by default)')
     parser.add_argument('--batch', type=int, default=32, help='batch size (32 by default)')
 
-    parser.add_argument('--opt', type=str, default='radam', help='optimizer radam / adam')
     parser.add_argument('--lr', type=float, default=0.001, help='learning rate (0.001 by default)')
 
     parser.add_argument('--train', type=str, default='dataset/train', help='training image folder (/dataset/train by default)')
@@ -57,7 +83,7 @@ def main():
     imagedir_test=os.path.join(os.getcwd(),args.test)
 
     f_log=open(args.result,'a')
-    f_log.write(f"{args.profile},{args.opt},{args.epoch},{args.lr},{args.batch},")
+    f_log.write(f"{args.profile},RAdam,{args.epoch},{args.lr},{args.batch},")
 
     def print_dataset_info(dataset_):
         _, list_dx_count_list = torch.unique(torch.tensor(dataset_.targets), return_counts=True)
@@ -92,7 +118,7 @@ def main():
     print_dataset_info(test_dataset)
 
 
-    train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=args.batch, shuffle=True, pin_memory=True, drop_last=True,num_workers=6)
+    train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=args.batch, shuffle=True, pin_memory=True, drop_last=True,num_workers=4)
     val_loader = None
     if val_dataset is not None:
         val_loader = torch.utils.data.DataLoader(val_dataset, batch_size=1, shuffle=False, pin_memory=True, drop_last=False,num_workers=4)
@@ -114,10 +140,13 @@ def main():
     #number of iterations
     n_epochs = args.epoch
     #optimizer and scheduler
-    if args.opt=='adam':
-        optimizer = torch.optim.Adam(model.parameters(), lr=args.lr)
-    elif args.opt=='radam':
+    try:
         optimizer = torch.optim.RAdam(model.parameters(), lr=args.lr)
+    except:
+        # Pytorch < 1.12
+        # pip3 install torch_optimizer 
+        import torch_optimizer as optim
+        optimizer = optim.RAdam(model.parameters(), lr=args.lr)
 
     #loss function (standard cross-entropy taking logits as inputs)
     loss_fn = torch.nn.CrossEntropyLoss()
@@ -193,7 +222,7 @@ def main():
         #print iteration results
         print("Epoch: %d/%d, lr: %f, train_loss: %f, val_loss: %f, val_acc: %f, time(sec): %f" % (epoch, n_epochs, optimizer.param_groups[0]['lr'], train_loss, val_loss, val_accuracy, end_time - start_time))
 
-    #torch.save(model.state_dict(), 'prev.pth')
+    torch.save(model.state_dict(), '%s %s %s.pth' % (args.train.replace("/","_"),args.test.replace("/","_"),datetime.now().strftime("%Y%m%d%H%M%S")))
     #print("Save Pytorch model")
     print("Finish Training")
 
@@ -235,7 +264,7 @@ def main():
     #Calculate AUC save xls for R statistics
     from sklearn.metrics import roc_auc_score
     from openpyxl import Workbook
-    
+
     for class_no,class_name in enumerate(test_dataset.class_to_idx):
         print(class_name)
         y_real=[]
@@ -250,38 +279,26 @@ def main():
   
         score = roc_auc_score(np.array(y_real), np.array(y_pred))
         print(f"ROC AUC: {score:.4f}")
-        if class_no==0:
-            f_log.write(f"{score:.4f},{args.train},{args.test}\n")
+        if class_no==0: # 0 = MELANOMA , 1 = MELANOCYTICNEVUS
+            f_log.write(f"{score:.4f}")
 
-        wb = Workbook()    
-        sheet1 = wb.active
-        sheet1.title = class_name
-        sheet1.cell(row=1, column=1).value = "dx"
-        sheet1.cell(row=1, column=2).value = "pred"
-        for no_,all_output_list_ in enumerate(all_output_list): 
-            all_output_list_softmax_=softmax(all_output_list_)
-            sheet1.cell(row=(no_+2), column=1).value = (all_label_list[no_]==class_no)
-            sheet1.cell(row=(no_+2), column=2).value = all_output_list_softmax_[class_no]
+            actual=[]
+            for y_real_ in y_real:
+                if y_real_==0:
+                    actual+=[1] #MEL
+                else:
+                    actual+=[0] #non-MEL
 
-        save_path=os.path.join(os.getcwd(),'stat','roc_%s.xlsx' % (class_name))
-        try:os.makedirs(os.path.dirname(save_path))
-        except:pass
-        wb.save(filename=save_path)
-        excel_path=save_path
+            predicted=[]
+            for y_pred_ in y_pred:
+                if y_pred_<0.5:
+                    predicted+=[1]
+                else:
+                    predicted+=[0]
 
-        f=open(os.path.join(os.getcwd(),'template','r.template'),'r')
-        template_list=f.readlines()
-        f.close()
-        template_=''
-        for t_ in template_list:
-            template_+=t_+'\n'
-        
-        template_=template_.replace('[XLS_PATH]',excel_path).replace('[TEST_NO_IMAGES]','%d' % (len(test_dataset))).replace('\\','/')
-        
-        save_path=os.path.join(os.getcwd(),'stat','R_%s.txt' % (class_name))
-        f=open(save_path,'w')
-        f.write(template_)
-        f.close()
+            accuracy, ppv, npv, sensitivity, specificity = calculate_metrics(predicted,actual)
+            f_log.write(f",{accuracy:.4f},{ppv:.4f},{npv:.4f},{sensitivity:.4f},{specificity:.4f}")
+            f_log.write(f",{args.train},{args.test}\n")
         
         
 if __name__ == '__main__':

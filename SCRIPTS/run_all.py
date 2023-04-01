@@ -48,7 +48,7 @@ for i in range(0,args.repeat):
     for select_train in train_list:
         for select_test in public_list:
             print(select_train,select_test)
-            cmd_=f"python3 train.py --model efficientnet --opt radam --batch {args.batch} --epoch {args.epoch} --lr {args.lr} --train '{select_train}' --test {select_test} --result {args.result_file}"
+            cmd_=f"python3 train.py --model efficientnet --batch {args.batch} --epoch {args.epoch} --lr {args.lr} --train '{select_train}' --test {select_test} --result {args.result_file}"
             print(cmd_)
             os.system(cmd_)
             time.sleep(1)
