@@ -1,0 +1,60 @@
+CAN5600_stat.csv
+Total 5619 
+Turkey , 68
+Russia , 300
+United States , 2690
+Brazil , 54
+Denmark , 50
+Ukraine , 107
+Sweden , 240
+Germany , 382
+Romania , 26
+Switzerland , 35
+Canada , 51
+Poland , 92
+France , 152
+- , 245
+Chile , 8
+Netherlands , 262
+Italy , 90
+Mexico , 3
+Japan , 132
+res.cloudinary.com , 8
+United Kingdom , 21
+China , 64
+Hong Kong , 8
+Republic of Korea , 121
+Spain , 74
+h\u003d200 , 8
+Thailand , 13
+Australia , 10
+Taiwan , 6
+Greece , 21
+Slovenia , 7
+Ireland , 60
+Vietnam , 41
+Belgium , 12
+Argentina , 3
+Republic of Moldova , 4
+Singapore , 6
+Finland , 24
+Czechia , 13
+Republic of Lithuania , 3
+Portugal , 8
+New Zealand , 2
+Estonia , 20
+British Virgin Islands , 2
+Norway , 8
+India , 8
+Iran , 2
+Tunisia , 5
+Colombia , 2
+Indonesia , 3
+Belarus , 12
+bi.im-g.pl , 4
+Hungary , 2
+United Arab Emirates , 2
+Austria , 3
+Palestine , 2
+static.pb.pl , 2
+1887  different host sites

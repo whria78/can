@@ -1,0 +1,165 @@
+LESION130k_stat.csv
+Total 131253 
+United States , 63727
+Sweden , 6405
+Netherlands , 5344
+United Kingdom , 835
+Japan , 4261
+Denmark , 1262
+Spain , 1608
+Germany , 8415
+Palestine , 12
+Poland , 2545
+Tunisia , 77
+Russia , 5395
+Italy , 2111
+France , 2886
+Republic of Korea , 3521
+India , 176
+- , 7046
+China , 1373
+Greece , 256
+Singapore , 563
+bi.im-g.pl , 72
+Vietnam , 2914
+Thailand , 354
+Ukraine , 751
+Brazil , 644
+Canada , 1380
+Colombia , 18
+Taiwan , 246
+Turkey , 834
+Portugal , 172
+Iceland , 84
+Ireland , 958
+c_limit/stye , 2
+Estonia , 225
+Kazakhstan , 17
+Czechia , 243
+Romania , 196
+Norway , 224
+Austria , 160
+Hungary , 23
+Hong Kong , 593
+Switzerland , 585
+Peru , 13
+Finland , 416
+w_1694/https://www.keloid212.com/wp-content/uploads/2020/01/Papular-Neck-Keloid.jpg , 5
+Belize , 4
+Mongolia , 6
+ret_img , 16
+Australia , 330
+res.cloudinary.com , 28
+Chile , 102
+w_1200 , 9
+Serbia , 22
+4.bp.blogspot.com , 2
+2000 , 17
+Republic of Lithuania , 142
+fthmb.tqn.com , 15
+media.glamourmagazine.co.uk , 5
+w_325 , 2
+Suriname , 12
+South Africa , 45
+Argentina , 67
+g_auto/c_scale , 10
+h_1155 , 6
+h\u003d200 , 69
+Uzbekistan , 8
+400 , 14
+www.verywellhealth.com , 94
+United Arab Emirates , 15
+Belarus , 41
+Mexico , 19
+Slovenia , 77
+3810 , 4
+cdn1.ntv.com.tr , 6
+Bulgaria , 76
+Republic of Moldova , 29
+ik.imagekit.io , 4
+dpr_3.0 , 8
+Belgium , 158
+British Virgin Islands , 110
+Luxembourg , 3
+Malaysia , 62
+bi.gazeta.pl , 10
+c_limit/plaque-psoriasis.jpg , 5
+cdn.shortpixel.ai , 6
+q_auto , 7
+New Zealand , 67
+Croatia , 21
+media.allure.com , 6
+Cyprus , 12
+e_sharpen:100 , 7
+Slovakia , 46
+c_limit/mosquito-bite-allergy.jpg , 2
+Iran , 96
+media.self.com , 8
++Pictures , 2
+w_1398/https://www.keloid212.com/wp-content/uploads/2020/01/Linear-Neck-Keloid.jpg , 2
+s3.theasianparent.com , 7
+fl_progressive , 4
+340 , 3
+h_1800 , 7
+Uruguay , 2
+c_limit/gettyimages-1165346664_sf_sq.jpg , 4
+Cuba , 12
+Kenya , 18
+h_900 , 4
+c_limit/gettyimages-519167910_sf_sq.jpg , 4
+h_2430 , 5
+w_700 , 4
+630 , 2
+Indonesia , 10
+560 , 4
+Armenia , 9
+0/erytrodermia.jpg , 3
+i1.wp.com , 4
+San Marino , 2
+440 , 13
+i0.1und1.de , 2
+Bangladesh , 2
+Costa Rica , 5
+c_limit/henna%20freckles%20tiktok.jpg , 2
+Israel , 6
+h_1400 , 3
+c_limit/GettyImages-476089525.jpg , 6
+dpr_auto , 3
+static.pb.pl , 2
+c_limit/smarriz_glamour_24jul18_insta_sq.jpg , 2
+Egypt , 6
+Latvia , 2
+c_limit/August-Allure-Freckles-InBook.jpg , 6
+0 , 9
+c_limit/Scars-vogue-170820-credit-Sophie-Mayanne.jpg , 2
+h_1278 , 2
+c_limit/GettyImages-185790307.jpg , 10
+c_fill , 4
+d2dxldo5hhj2zu.cloudfront.net , 5
+c_limit/rosacea.jpg , 2
+c_limit/keratosis-pilaris-bumps-lede.jpg , 2
+0/Brodawka+%C5%82ojotokowa.jpg , 2
+20120915_113525.jpg , 4
+c_limit/milia%20closeup.jpg , 8
+i0.web.de , 3
+0/czerwone-dlonie.jpg , 2
+0/W%C5%82%C3%B3kniak.jpg , 6
+forcex/img/var/doctissimo/storage/images/fr/www/sante/diaporamas/les-differents-types-de-verrue/3049790-1-fre-FR/Les-differents-types-de-verrues.jpg , 2
+media.sciencephoto.com , 19
+h_800 , 2
+Azerbaijan , 3
+media.gq.com.mx , 2
+w_1200/eagle/uploads/cca97c80d89ae5468547088748abbee7/a5965e.jpg , 2
+i0.gmx.at , 3
+digitalarchive.uthscsa.edu , 2
+Panama , 2
+w_940/https://www.psoriasistreatmentbangalore.com/wp-content/uploads/2018/05/inverse-psoriasis.jpg , 2
+f\u003dauto/https://castle.womany.net/images/content/pictures/110347/womany_5A0A0794_logo_1586837310-32440-0013-9107.png , 2
+0/98291948_m.jpg , 2
+Puerto Rico , 4
+prog , 2
+h_855 , 2
+www.wykop.pl , 2
+q_auto/cnnarabic/2016/03/01/images/78217.jpg , 2
+1.bp.blogspot.com , 2
+18482  different host sites

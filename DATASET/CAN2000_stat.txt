@@ -1,0 +1,45 @@
+CAN2000_stat.csv
+Total 2006 
+United States , 891
+Brazil , 16
+Netherlands , 107
+Ireland , 27
+Russia , 124
+France , 58
+Japan , 45
+Chile , 6
+Australia , 2
+Ukraine , 17
+Germany , 154
+Republic of Korea , 50
+Romania , 10
+Canada , 26
+Sweden , 77
+Turkey , 23
+Denmark , 25
+h\u003d200 , 5
+Poland , 43
+- , 80
+United Kingdom , 10
+Greece , 9
+Belgium , 7
+Norway , 3
+China , 34
+Italy , 33
+Spain , 32
+Switzerland , 19
+Vietnam , 7
+res.cloudinary.com , 3
+Finland , 10
+bi.im-g.pl , 3
+British Virgin Islands , 2
+Indonesia , 2
+India , 3
+Czechia , 4
+Estonia , 6
+Portugal , 3
+Thailand , 2
+Austria , 2
+static.pb.pl , 2
+Belarus , 8
+901  different host sites
