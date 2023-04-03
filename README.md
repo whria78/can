@@ -125,6 +125,11 @@ Please check this tutorial for the detail of morphing: https://www.youtube.com/w
 
 ## 3. Training CNN Models ##
 
+Please check the dependencies
+```.bash
+pip install scikit-learn scipy matplotlib torch_optimizer openpyxl 
+```
+
 Please check the test folders - [DATA/asan], [DATA/snu], [DATA/pad], [DATA/seven], [DATA/water], [DATA/edin], [DATA/mednode]
 
 cf) Edinburgh dataset [DATA/edin] is a commercial dataset
