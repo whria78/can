@@ -125,6 +125,8 @@ Please check this tutorial for the detail of morphing: https://www.youtube.com/w
 
 ## 3. Training CNN Models ##
 
+**We strongly recommend to run this script on Linux platform. On Windows, irregular errors were observed.**
+
 Please check the dependencies
 ```.bash
 pip install scikit-learn scipy matplotlib torch_optimizer openpyxl 
@@ -138,7 +140,6 @@ All images should be squared off with cropped edges.
 
 ```.bash
 # An example of training a Efficient-Lite0 with GAN5000 & Testing with SNU dataset
-# python3 [LINUX] / python [WINDOWS] 
 python3 train.py --model efficientnet --opt radam --batch 64 --epoch 30 --lr 0.001 --train [DATA/GAN5000] --test [DATA/snu] --result log.txt
 
 # An example of running all test configurations
