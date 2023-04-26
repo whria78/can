@@ -2,7 +2,7 @@
 
 ![img](https://github.com/whria78/can/blob/main/thumbnails/melanoma_nevus.jpg?raw=true)
 
-The lesion is needed to be specified in this way to improve the performance of CNNs. However, this process requires a huge amount of time and effort by dermatologists called ‘Data Slave’. In this project, we created a dataset of 5,619 images for melanoma and melanocytic nevus by crawling photographs on the Internet and annotating them by an algorithm (Model Dermatology Build2021; https://modelderm.com). Like the way of ImageNet, this dataset consists of labeled internet images. 
+The lesion needs to be specified in this way to improve the performance of CNNs. However, this process requires a huge amount of time and effort from dermatologists. In this project, we created a dataset of 5,619 images of melanoma and melanocytic nevus by crawling photographs from the internet and annotating them using an algorithm called Model Dermatology Build2021 (https://modelderm.com). Similar to the ImageNet dataset, this dataset consists of labeled internet images.
 
 ## Data repository
 
@@ -32,7 +32,7 @@ The lesion is needed to be specified in this way to improve the performance of C
 
 ## 1. Download CAN5600 / CAN2000 / LESION130k datasets ##
 
-This repository contains only the download URLs of datasets. The zipped archived can be requested by email (whria78@gmail.com)
+This repository only contains the download URLs of datasets. The zipped archives can be requested by email (whria78@gmail.com).
 
 Please check dependencies.
 ```.bash
@@ -138,7 +138,7 @@ Please check the test folders - [DATA/asan], [DATA/snu], [DATA/pad], [DATA/seven
 
 cf) Edinburgh dataset [DATA/edin] is a commercial dataset
 
-All images should be squared off with cropped edges.
+**All images should be squared off with cropped edges.**
 
 ```.bash
 # An example of training a Efficient-Lite0 with GAN5000 & Testing with SNU dataset
@@ -152,7 +152,7 @@ python3 run_all.py --result_file log.txt
 
 ## Deployment Tool for the Custom Algorithm ##
 
-We released a simple training and web deployment code for testing in the real-world setting.
+We have released a simple training and web deployment code for testing in real-world settings.
 https://github.com/whria78/data-in-paper-out
 
 
