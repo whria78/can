@@ -27,7 +27,7 @@ The lesion is needed to be specified in this way to improve the performance of C
 | &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; project.py | project.py of STYLEGAN2-ADA-PYTORCH
 | &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; run_all.py | Running all configurations (Training EfficientNet and Testing)
 | &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; train.py | Training EfficientNet & Testing with various datasets
-| &ensp;&ensp;&boxvr;&nbsp; [SCRIPTS](https://github.com/whria78/can/tree/main/RESULTS) | Result
+| &ensp;&ensp;&boxvr;&nbsp; [Result](https://github.com/whria78/can/tree/main/RESULTS) | Result
 | &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; raw_AUC_ACC_SE_SP_PPV_NPV_20230427 | Raw result
 
 ## 1. Download CAN5600 / CAN2000 / LESION130k datasets ##
