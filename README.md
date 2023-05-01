@@ -127,7 +127,7 @@ Please check this tutorial for the detail of morphing: https://www.youtube.com/w
 
 ## 3. Training CNN Models ##
 
-![warning icon](https://github.com/github/octicons/blob/main/icons/alert-16.svg) **We strongly recommend to run this script on Linux platform. On Windows, irregular errors were observed.**
+:warning: **We strongly recommend to run this script on Linux platform. On Windows, irregular errors were observed.**
 
 Please check the dependencies
 ```.bash
@@ -138,7 +138,7 @@ Please check the test folders - [DATA/asan], [DATA/snu], [DATA/pad], [DATA/seven
 
 cf) Edinburgh dataset [DATA/edin] is a commercial dataset
 
-![warning icon](https://github.com/github/octicons/blob/main/icons/alert-16.svg) **All images should be squared off with cropped edges.**
+:warning: **All images should be squared off with cropped edges.**
 
 ```.bash
 # An example of training a Efficient-Lite0 with GAN5000 & Testing with SNU dataset
