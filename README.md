@@ -1,8 +1,8 @@
-## Clinical photographs Annotated by Neural networks (CAN5600 and CAN2000 dataset) ##
+## Clinical photographs Annotated by Neural networks (CAN5600, LESION130k, and CAN2000 dataset) ##
 
 ![img](https://github.com/whria78/can/blob/main/thumbnails/melanoma_nevus.jpg?raw=true)
 
-The lesion needs to be specified in this way to improve the performance of CNNs. However, this process requires a huge amount of time and effort from dermatologists. In this project, we created a dataset of 5,619 images of melanoma and melanocytic nevus by crawling photographs from the internet and annotating them using an algorithm called Model Dermatology Build2021 (https://modelderm.com). Similar to the ImageNet dataset, this dataset consists of labeled internet images.
+The specification of the lesion in this manner is necessary to enhance the performance of CNNs. However, this process demands a significant amount of time and effort from dermatologists. As part of this project, we constructed a dataset of 5,619 images of melanoma and melanocytic nevus by crawling pictures from the internet and annotating them with the assistance of an algorithm known as Model Dermatology Build2021 (https://modelderm.com). Comparable to the ImageNet dataset, this dataset is composed of labeled images from the internet. LESION130k was obtained from 18,482 websites across roughly 80 countries and includes approximately 130,000 lesion images.
 
 ## Data repository
 
