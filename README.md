@@ -32,7 +32,7 @@ The specification of the lesion in this manner is necessary to enhance the perfo
 
 ## 1. Download CAN5600 / CAN2000 / LESION130k datasets ##
 
-This repository only contains the download URLs of datasets. The zipped archives can be requested by email (whria78@gmail.com).
+This repository only contains the download URLs of datasets. For further inquries, please email to Dr. Han (whria78@gmail.com).
 
 Please check dependencies.
 ```.bash
