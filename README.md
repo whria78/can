@@ -197,6 +197,14 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7479321/)
 
 - SKINL2 dataset (light field dataset of skin lesions; https://www.it.pt/AutomaticPage?id=3459)
 
+
+## List of Dermatology Atlas Sites ##
+
+- DermIS, http://www.dermis.net
+
+- Dermatology ATLAS (Samuel Freire da Silva, Delso Bringel Calheiros), https://www.atlasdermatologico.com.br/
+
+
 ## License
 MIT license
 
