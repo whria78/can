@@ -158,6 +158,8 @@ https://github.com/whria78/data-in-paper-out
 
 ## List of Dermatology Datasets (Clinical Photographs) ##
 
+- CAN dataset (melanoma, nevus, and skin lesions; CAN5600 = 5,619 images, GAN5000 = 5,000 images, LESION130k = 132,673 images; https://github.com/whria78/can; https://doi.org/10.6084/m9.figshare.21507189)
+
 - SNU Test dataset (general disorders; 240 images; https://figshare.com/articles/dataset/SNU_SNU_MELANOMA_and_Reddit_dataset_Quiz/6454973)
 
 - Asan Test dataset (10 nodular disorders; 1,276 Asan + 152 Hallym images; https://figshare.com/articles/software/Caffemodel_files_and_Python_Examples/5406223)
