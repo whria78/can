@@ -125,7 +125,7 @@ Trained GAN Models are available at https://doi.org/10.6084/m9.figshare.21507189
 
 Please check this tutorial for the detail of morphing: https://www.youtube.com/watch?v=J2nTo0cYVBk
 
-## 3. Training CNN Models ##
+## 4. Training CNN Models ##
 
 :warning: **We strongly recommend to run this script on Linux platform. On Windows, irregular errors were observed.**
 
@@ -149,6 +149,25 @@ python3 train.py --model efficientnet --opt radam --batch 64 --epoch 30 --lr 0.0
 # https://github.com/whria78/can/blob/main/SCRIPTS/run_all.py
 python3 run_all.py --result_file log.txt
 ```
+
+## 5. Result Part 1 - GAN images ##
+
+![img](https://github.com/whria78/can/blob/main/RESULTS/Fig2.png?raw=true)
+![img](https://github.com/whria78/can/blob/main/RESULTS/Fig3.png?raw=true)
+
+All synthetic images were available at https://doi.org/10.6084/m9.figshare.21507189. 
+
+Web-demo for the synthetic images (GAN5000) 
+https://modelderm.com/thismoledoesnotexist
+
+Turing test for the synthetic images (GAN5000 and CAN5600)
+https://modelderm.com/turing/?q=1 , q = 1~19 for each test set 
+
+
+## 6. Result Part 2 - CNN Models ##
+
+![img](https://github.com/whria78/can/blob/main/RESULTS/Table2_PNG.png?raw=true)
+
 
 ## Deployment Tool for the Custom Algorithm ##
 
@@ -210,3 +229,15 @@ MIT license
 
 ## Citation
 Under review
+```
+Soo Ick Cho, Cristian Navarrete-Dechent, Roxana Daneshjou, Hye Soo Cho, Sung Eun Chang, Seong Hwan Kim, Jung-Im Na, Seung Seog Han
+
+Authors
+Lunit, Seoul, Korea (SI Cho)
+Department of Dermatology, School of Medicine, Pontificia Universidad Católica de Chile, Santiago, Chile (Cristian N)
+Department of Dermatology, Stanford University, California, United States (Roxana D)
+Department of Dermatology, Asan Medical Center, Ulsan University College of Medicine, Seoul, Korea (HS Cho, SE Chang)
+Department of Plastic and Reconstructive Surgery, Kangnam Sacred Hospital, Hallym University College of Medicine, Seoul, Korea (SH Kim)
+Department of Dermatology, Seoul National University College of Medicine, Seoul National University Bundang Hospital, Seoul, Korea (J Na)
+Department of Dermatology, I Dermatology Clinic, Seoul, Korea; IDerma Inc., Seoul, Korea (SS Han)
+```
