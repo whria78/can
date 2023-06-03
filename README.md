@@ -4,7 +4,7 @@
 
 The specification of the lesion in this manner is necessary to enhance the performance of CNNs. However, this process demands a significant amount of time and effort from dermatologists. As part of this project, we constructed a dataset of 5,619 images of melanoma and melanocytic nevus by crawling pictures from the internet and annotating them with the assistance of ModelDerm Build2021 (https://modelderm.com; 'C'linical photographs 'A'nnotated by 'N'eural networks = CAN dataset). Comparable to the ImageNet dataset, this dataset is composed of labeled images from the internet. LESION130k was obtained from 18,482 websites across roughly 80 countries and includes 132,673 lesion images. A total of 5,000 synthetic images (GAN5000 dataset) were also generated using the generative network (StyleGAN2-ADA; Training = CAN2000, Pre-training = LESION130k).  A neural network trained on the created dataset (CAN5600) performed better than the same network trained on pre-existing datasets combined. Both the annotated (CAN5600 and LESION130k) and synthetic (GAN5000) datasets could be shared for AI training and consensus between doctors.
 
-# Examples of the synthetic image of melanoma (A) and nevus (B) ##
+# Examples of the synthetic image of melanoma (A), nevus (B), and morphed images
 
 ![img](https://github.com/whria78/can/blob/main/RESULTS/Fig2.png?raw=true)
 ![img](https://github.com/whria78/can/blob/main/RESULTS/Fig3.png?raw=true)
