@@ -2,20 +2,20 @@
 
 ![img](https://github.com/whria78/can/blob/main/thumbnails/melanoma_nevus.jpg?raw=true)
 
-The specification of the lesion in this manner is necessary to enhance the performance of CNNs. However, this process demands a significant amount of time and effort from dermatologists. As part of this project, we constructed a dataset of 5,619 images of melanoma and melanocytic nevus by crawling pictures from the internet and annotating them with the assistance of ModelDerm Build2021 (https://modelderm.com; 'C'linical photographs 'A'nnotated by 'N'eural networks = CAN dataset). Comparable to the ImageNet dataset, this dataset is composed of labeled images from the internet. LESION130k was obtained from 18,482 websites across roughly 80 countries and includes 132,673 lesion images. A total of 5,000 synthetic images (GAN5000 dataset) were also generated using the generative network (StyleGAN2-ADA; Training = CAN2000, Pre-training = LESION130k).  A neural network trained on the created dataset (CAN5600) performed better than the same network trained on pre-existing datasets combined. Both the annotated (CAN5600 and LESION130k) and synthetic (GAN5000) datasets could be shared for AI training and consensus between doctors.
+The specification of the lesion in this manner is necessary to enhance the performance of CNNs. However, this process demands a significant amount of time and effort from dermatologists. As part of this project, we constructed a dataset of 5,619 images of melanoma and melanocytic nevus by crawling pictures from the internet and annotating them with the assistance of ModelDerm Build2021 (https://modelderm.com; 'C'linical photographs 'A'nnotated by 'N'eural networks = CAN dataset). Comparable to the ImageNet dataset, this dataset is composed of labeled images from the internet. LESION130k was obtained from 18,482 websites across roughly 80 countries and includes 132,673 lesion images. 
+
 
 # Examples of the synthetic image of melanoma (A), nevus (B), and morphed images
 
 ![img](https://github.com/whria78/can/blob/main/RESULTS/Fig2.png?raw=true)
 ![img](https://github.com/whria78/can/blob/main/RESULTS/Fig3.png?raw=true)
 
-All synthetic images were available at https://doi.org/10.6084/m9.figshare.21507189. 
+A total of 5,000 synthetic images (GAN5000 dataset) were generated using the generative network (StyleGAN2-ADA; Training = CAN2000, Pre-training = LESION130k). All synthetic images were available at https://doi.org/10.6084/m9.figshare.21507189. 
 
-Web-demo for the synthetic images (GAN5000) 
-https://modelderm.com/thismoledoesnotexist
+Web-demo for the synthetic images (GAN5000): https://modelderm.com/thismoledoesnotexist
 
-Turing test for the synthetic images (GAN5000 and CAN5600)
-https://modelderm.com/turing/?q=1 , q = 1~19 for each test set 
+Turing test for the synthetic images (GAN5000 and CAN5600): https://modelderm.com/turing/?q=1 , q = 1~19 for each test set 
+
 
 # CNN Model Performance
 
@@ -177,13 +177,13 @@ python3 run_all.py --result_file log.txt
 ```
 
 
-## Deployment Tool for the Custom Algorithm ##
+## Deployment Tool for the Custom Algorithm (Experimental) ##
 
 We have released a simple training and web deployment code for testing in real-world settings.
 https://github.com/whria78/data-in-paper-out
 
 
-## List of Dermatology Datasets (Clinical Photographs) ##
+## List of Dermatology Datasets - Clinical Photographs ##
 
 - CAN dataset (melanoma, nevus, and skin lesions; CAN5600 = 5,619 images, GAN5000 = 5,000 images, LESION130k = 132,673 images; https://github.com/whria78/can; https://doi.org/10.6084/m9.figshare.21507189)
 
