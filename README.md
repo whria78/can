@@ -150,7 +150,7 @@ python3 train.py --model efficientnet --opt radam --batch 64 --epoch 30 --lr 0.0
 python3 run_all.py --result_file log.txt
 ```
 
-## 5. Result Part 1 - GAN images ##
+## 5. Result Part 1 - Examples of the synthetic image of melanoma (A) and nevus (B) ##
 
 ![img](https://github.com/whria78/can/blob/main/RESULTS/Fig2.png?raw=true)
 ![img](https://github.com/whria78/can/blob/main/RESULTS/Fig3.png?raw=true)
@@ -164,7 +164,7 @@ Turing test for the synthetic images (GAN5000 and CAN5600)
 https://modelderm.com/turing/?q=1 , q = 1~19 for each test set 
 
 
-## 6. Result Part 2 - CNN Models ##
+## 6. Result Part 2 - CNN Model Performance ##
 
 ![img](https://github.com/whria78/can/blob/main/RESULTS/Table2_PNG.png?raw=true)
 
