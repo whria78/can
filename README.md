@@ -4,6 +4,29 @@
 
 The specification of the lesion in this manner is necessary to enhance the performance of CNNs. However, this process demands a significant amount of time and effort from dermatologists. As part of this project, we constructed a dataset of 5,619 images of melanoma and melanocytic nevus by crawling pictures from the internet and annotating them with the assistance of ModelDerm Build2021 (https://modelderm.com; 'C'linical photographs 'A'nnotated by 'N'eural networks = CAN dataset). Comparable to the ImageNet dataset, this dataset is composed of labeled images from the internet. LESION130k was obtained from 18,482 websites across roughly 80 countries and includes 132,673 lesion images. A total of 5,000 synthetic images (GAN5000 dataset) were also generated using the generative network (StyleGAN2-ADA; Training = CAN2000, Pre-training = LESION130k).  A neural network trained on the created dataset (CAN5600) performed better than the same network trained on pre-existing datasets combined. Both the annotated (CAN5600 and LESION130k) and synthetic (GAN5000) datasets could be shared for AI training and consensus between doctors.
 
+# Examples of the synthetic image of melanoma (A) and nevus (B) ##
+
+![img](https://github.com/whria78/can/blob/main/RESULTS/Fig2.png?raw=true)
+![img](https://github.com/whria78/can/blob/main/RESULTS/Fig3.png?raw=true)
+
+All synthetic images were available at https://doi.org/10.6084/m9.figshare.21507189. 
+
+Web-demo for the synthetic images (GAN5000) 
+https://modelderm.com/thismoledoesnotexist
+
+Turing test for the synthetic images (GAN5000 and CAN5600)
+https://modelderm.com/turing/?q=1 , q = 1~19 for each test set 
+
+# CNN Model Performance
+
+![img](https://github.com/whria78/can/blob/main/RESULTS/Table2_PNG.png?raw=true)
+
+```
+ * In each test, the test dataset was excluded to prevent train-test contamination. One of the seven public datasets was used as a test dataset. The remaining six public datasets were combined as a training dataset. 
+ ** Continuous images were selected to have the same number of melanoma and nevus images as CAN5600 (5,619 images) or CAN2000 (2,006 images) datasets.
+ *** We compared the AUC results with those tested on the public datasets combined (0.809±0.063) using Wilcoxon signed-rank test.
+```
+
 
 ## Data repository
 
@@ -151,29 +174,6 @@ python3 train.py --model efficientnet --opt radam --batch 64 --epoch 30 --lr 0.0
 python3 run_all.py --result_file log.txt
 ```
 
-## 5. Result Part 1 - Examples of the synthetic image of melanoma (A) and nevus (B) ##
-
-![img](https://github.com/whria78/can/blob/main/RESULTS/Fig2.png?raw=true)
-![img](https://github.com/whria78/can/blob/main/RESULTS/Fig3.png?raw=true)
-
-All synthetic images were available at https://doi.org/10.6084/m9.figshare.21507189. 
-
-Web-demo for the synthetic images (GAN5000) 
-https://modelderm.com/thismoledoesnotexist
-
-Turing test for the synthetic images (GAN5000 and CAN5600)
-https://modelderm.com/turing/?q=1 , q = 1~19 for each test set 
-
-
-## 6. Result Part 2 - CNN Model Performance ##
-
-![img](https://github.com/whria78/can/blob/main/RESULTS/Table2_PNG.png?raw=true)
-
-```
- * In each test, the test dataset was excluded to prevent train-test contamination. One of the seven public datasets was used as a test dataset. The remaining six public datasets were combined as a training dataset. 
- ** Continuous images were selected to have the same number of melanoma and nevus images as CAN5600 (5,619 images) or CAN2000 (2,006 images) datasets.
- *** We compared the AUC results with those tested on the public datasets combined (0.809±0.063) using Wilcoxon signed-rank test.
-```
 
 ## Deployment Tool for the Custom Algorithm ##
 
