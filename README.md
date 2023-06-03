@@ -5,7 +5,7 @@
 The specification of the lesion in this manner is necessary to enhance the performance of CNNs. However, this process demands a significant amount of time and effort from dermatologists. As part of this project, we constructed a dataset of 5,619 images of melanoma and melanocytic nevus by crawling pictures from the internet and annotating them with the assistance of ModelDerm Build2021 (https://modelderm.com; 'C'linical photographs 'A'nnotated by 'N'eural networks = CAN dataset). Comparable to the ImageNet dataset, this dataset is composed of labeled images from the internet. LESION130k was also obtained from 18,482 websites across roughly 80 countries and includes 132,673 lesion images for unsupervised training. 
 
 
-# Examples of the synthetic image of melanoma (A), nevus (B), and morphed images
+## Examples of the synthetic image of melanoma (A), nevus (B), and morphed images ##
 
 ![img](https://github.com/whria78/can/blob/main/RESULTS/Fig2.png?raw=true)
 ![img](https://github.com/whria78/can/blob/main/RESULTS/result_4109_0122.jpg?raw=true)
@@ -17,7 +17,7 @@ Web-demo for the synthetic images (GAN5000): https://modelderm.com/thismoledoesn
 Turing test for the synthetic images (GAN5000 and CAN5600): https://modelderm.com/turing/?q=1 , q = 1~19 for each test set 
 
 
-# CNN Model Performance
+## CNN Model Performance
 
 ![img](https://github.com/whria78/can/blob/main/RESULTS/Table2_PNG.png?raw=true)
 
