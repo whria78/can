@@ -236,10 +236,10 @@ MIT license
 ## Citation
 Under review
 ```
+Authors: 
 Soo Ick Cho, Cristian Navarrete-Dechent, Roxana Daneshjou, Hye Soo Cho, Sung Eun Chang, Seong Hwan Kim, Jung-Im Na, Seung Seog Han
-
-Authors
-Lunit, Seoul, Korea (SI Cho)
+Affiliations: 
+Lunit, Seoul, Korea (SI Cho) 
 Department of Dermatology, School of Medicine, Pontificia Universidad Católica de Chile, Santiago, Chile (Cristian N)
 Department of Dermatology, Stanford University, California, United States (Roxana D)
 Department of Dermatology, Asan Medical Center, Ulsan University College of Medicine, Seoul, Korea (HS Cho, SE Chang)
