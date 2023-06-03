@@ -21,6 +21,8 @@ https://modelderm.com/turing/?q=1 , q = 1~19 for each test set
 
 ![img](https://github.com/whria78/can/blob/main/RESULTS/Table2_PNG.png?raw=true)
 
+The EfficientNet-Lite0 trained on the annotated or synthetic images achieved higher or equivalent mean AUC to the EfficientNet-Lite0 trained using the pathologically confirmed public dataset.
+
 ```
  * In each test, the test dataset was excluded to prevent train-test contamination. One of the seven public datasets was used as a test dataset. The remaining six public datasets were combined as a training dataset. 
  ** Continuous images were selected to have the same number of melanoma and nevus images as CAN5600 (5,619 images) or CAN2000 (2,006 images) datasets.
