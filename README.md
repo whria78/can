@@ -1,4 +1,4 @@
-## Clinical photographs Annotated by Neural networks (CAN5600, LESION130k, and CAN2000 dataset) ##
+## Clinical photographs Annotated by Neural networks - CAN dataset ##
 
 ![img](https://github.com/whria78/can/blob/main/thumbnails/melanoma_nevus.jpg?raw=true)
 
