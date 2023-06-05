@@ -1,33 +1,29 @@
-## Clinical photographs Annotated by Neural networks - CAN dataset ##
+## 'C'linical photographs 'A'nnotated by 'N'eural networks ― CAN dataset ##
 
 ![img](https://github.com/whria78/can/blob/main/thumbnails/melanoma_nevus.jpg?raw=true)
 
 The specification of the lesion in this manner is necessary to enhance the performance of CNNs. However, this process demands a significant amount of time and effort from dermatologists. As part of this project, we constructed a dataset of 5,619 images of melanoma and melanocytic nevus by crawling pictures from the internet and annotating them with the assistance of ModelDerm Build2021 (https://modelderm.com; 'C'linical photographs 'A'nnotated by 'N'eural networks = CAN dataset). Comparable to the ImageNet dataset, this dataset is composed of labeled images from the internet. LESION130k was also obtained from 18,482 websites across roughly 80 countries and includes 132,673 lesion images for unsupervised training. 
 
 
-## Examples of the synthetic image of melanoma (A), nevus (B), and morphed images ##
+## Examples of the synthetic image ― melanoma (A), nevus (B), and morphed images ##
 
 ![img](https://github.com/whria78/can/blob/main/RESULTS/Fig2.png?raw=true)
 ![img](https://github.com/whria78/can/blob/main/RESULTS/result_4109_0122.jpg?raw=true)
 
-A total of 5,000 synthetic images (GAN5000 dataset) were generated using the generative network (StyleGAN2-ADA; Training = CAN2000, Pre-training = LESION130k). All synthetic images were available at https://doi.org/10.6084/m9.figshare.21507189. 
+A total of 5,000 synthetic images (GAN5000 dataset) were generated using the generative network (StyleGAN2-ADA; Training = CAN2000, Pre-training = LESION130k). 
 
-Web-demo for the synthetic images (GAN5000): https://modelderm.com/thismoledoesnotexist
+All synthetic images (jpg): https://doi.org/10.6084/m9.figshare.21507189. 
 
-Turing test for the synthetic images (GAN5000 and CAN5600): https://modelderm.com/turing/?q=1 , q = 1~19 for each test set 
+Web-demo: https://modelderm.com/thismoledoesnotexist
+
+Turing test: https://modelderm.com/turing/?q=1 , q = 1~19 for each test set 
 
 
 ## CNN Model Performance
 
 ![img](https://github.com/whria78/can/blob/main/RESULTS/Table2_PNG.png?raw=true)
 
-The EfficientNet-Lite0 trained on the annotated or synthetic images achieved higher or equivalent mean AUC to the EfficientNet-Lite0 trained using the pathologically confirmed public dataset.
-
-```
- * In each test, the test dataset was excluded to prevent train-test contamination. One of the seven public datasets was used as a test dataset. The remaining six public datasets were combined as a training dataset. 
- ** Continuous images were selected to have the same number of melanoma and nevus images as CAN5600 (5,619 images) or CAN2000 (2,006 images) datasets.
- *** We compared the AUC results with those tested on the public datasets combined (0.809±0.063) using Wilcoxon signed-rank test.
-```
+The EfficientNet-Lite0 trained on the annotated (CAN5600) or synthetic (GAN5000) images achieved higher or equivalent mean AUC to the EfficientNet-Lite0 trained using the pathologically confirmed public dataset.
 
 
 ## Data repository
@@ -238,14 +234,11 @@ MIT license
 ## Citation
 Under review
 ```
-Authors: 
-Soo Ick Cho, Cristian Navarrete-Dechent, Roxana Daneshjou, Hye Soo Cho, Sung Eun Chang, Seong Hwan Kim, Jung-Im Na, Seung Seog Han
-Affiliations: 
-Lunit, Seoul, Korea (SI Cho) 
-Department of Dermatology, School of Medicine, Pontificia Universidad Católica de Chile, Santiago, Chile (Cristian N)
-Department of Dermatology, Stanford University, California, United States (Roxana D)
-Department of Dermatology, Asan Medical Center, Ulsan University College of Medicine, Seoul, Korea (HS Cho, SE Chang)
-Department of Plastic and Reconstructive Surgery, Kangnam Sacred Hospital, Hallym University College of Medicine, Seoul, Korea (SH Kim)
-Department of Dermatology, Seoul National University College of Medicine, Seoul National University Bundang Hospital, Seoul, Korea (J Na)
-Department of Dermatology, I Dermatology Clinic, Seoul, Korea; IDerma Inc., Seoul, Korea (SS Han)
+Soo Ick Cho ― Lunit Inc
+Cristian Navarrete-Dechent ― Pontificia Universidad Católica de Chile
+Roxana Daneshjou ― Stanford University
+Sung Eun Chang, Hye Soo Cho ― Asan Medical Center
+Seong Hwan Kim ― Hallym University
+Jung-Im Na ― Seoul National University
+Seung Seog Han ― I Dermatology Clinic; IDerma Inc
 ```
