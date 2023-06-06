@@ -7,8 +7,7 @@ The specification of the lesion in this manner is necessary to enhance the perfo
 
 ## Examples of the synthetic image ― melanoma (A), nevus (B), and morphed images ##
 
-![img](https://github.com/whria78/can/blob/main/RESULTS/Fig2.png?raw=true)
-![img](https://github.com/whria78/can/blob/main/RESULTS/result_4109_0122.jpg?raw=true)
+![img](https://github.com/whria78/can/blob/main/thumbnails/example.jpg?raw=true)
 
 A total of 5,000 synthetic images (GAN5000 dataset) were generated using the generative network (StyleGAN2-ADA; Training = CAN2000, Pre-training = LESION130k). 
 
