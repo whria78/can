@@ -233,11 +233,23 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7479321/)
 
 ## List of Dermatology Atlas Sites ##
 
-- DermIS, http://www.dermis.net
+- DermIS (Univ. of Heidelberg, Univ. of Erlangen), http://www.dermis.net
+	
+	cf) PeDOIA - pediatric atlas
 
 - Dermatology ATLAS (Samuel Freire da Silva, Delso Bringel Calheiros), https://www.atlasdermatologico.com.br/
 
 - DermaAmin (Jehad amin katach), https://www.dermaamin.com/site/atlas-of-dermatology.html
+
+- Dermatoweb (Josep M Casanova, Manel Baradad, Xavier Soria), http://www.dermatoweb.net/
+
+- Hellenic Dermatological atlas (Constantinos D. Verros), http://www.hellenicdermatlas.com/en/search/browse/
+
+- Atlas of Clinical Dermatology (Neils Velen), https://danderm-pdv.is.kkh.dk/atlas/index.html
+
+- DermNet (Amanda Oakley, DermNet New Zealand Trust), https://dermnetnz.org/
+
+- Dermatologic Image Database (University of Iowa), http://www.medicine.uiowa.edu/dermatology/diseaseimages/
 
 
 ## License
