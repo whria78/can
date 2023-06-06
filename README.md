@@ -11,11 +11,11 @@ The specification of the lesion in this manner is necessary to enhance the perfo
 
 A total of 5,000 synthetic images (GAN5000 dataset) were generated using the generative network (StyleGAN2-ADA; Training = CAN2000, Pre-training = LESION130k). 
 
-All synthetic images (jpg): https://doi.org/10.6084/m9.figshare.21507189. 
+All synthetic images (jpg): https://doi.org/10.6084/m9.figshare.21507189 
 
 Web-demo: https://modelderm.com/thismoledoesnotexist
 
-Turing test: https://modelderm.com/turing/?q=1 , q = 1~19 for each test set 
+Turing test: https://modelderm.com/turing/?q=1 (q = 1~19 for each test set) 
 
 
 ## CNN Model Performance
