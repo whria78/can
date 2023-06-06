@@ -46,8 +46,8 @@ The EfficientNet-Lite0 trained on the annotated (CAN5600) or synthetic (GAN5000)
 | &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; [out_source_0513](https://github.com/whria78/can/tree/main/SCRIPTS/out_source_0513) | An example of projecting images to latent space (nevus; seed0513).
 | &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; [out_source_1119](https://github.com/whria78/can/tree/main/SCRIPTS/out_source_1119) | An example of projecting images to latent space (melanoma; seed1119).
 | &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; morph.py | Morphing script
-| &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; project.py | project.py of STYLEGAN2-ADA-PYTORCH
-| &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; run_all.py | Running all configurations (Training EfficientNet and Testing)
+| &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; project.py | project.py (from STYLEGAN2-ADA-PYTORCH)
+| &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; run_all.py | Run all configurations using train.py
 | &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; train.py | Training EfficientNet & Testing with various datasets
 | &ensp;&ensp;&boxvr;&nbsp; [Result](https://github.com/whria78/can/tree/main/RESULTS) | Result
 | &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; raw_AUC_ACC... | Raw result of paper (AUC, ACC, SE, SP, PPV, NPV)
@@ -91,7 +91,7 @@ python download.py LESION130k.csv
 
 - Edinburgh Dermofit [Commercial] (10 nodular disorders; 1,300 images; https://licensing.edinburgh-innovations.ed.ac.uk/product/dermofit-image-library)
 
-- The subset of SNU and ASAN test datasets are included in this git.
+- The subset of SNU and ASAN test datasets are included in this git. Please refer to the composition and resolution of the photo for guidance.
 
 
 ## 3. Training GAN Models ##
@@ -143,7 +143,7 @@ python3 morph.py --network=mn500.pkl --source=out_source_0513/projected_w.npz --
 
 ```
 
-Trained GAN Models are available at https://doi.org/10.6084/m9.figshare.21507189
+Trained GAN Models: https://doi.org/10.6084/m9.figshare.21507189
 
 Please check this tutorial for the detail of morphing: https://www.youtube.com/watch?v=J2nTo0cYVBk
 
@@ -158,9 +158,9 @@ pip install scikit-learn scipy matplotlib torch_optimizer openpyxl
 
 Please check the test folders - [DATA/asan], [DATA/snu], [DATA/pad], [DATA/seven], [DATA/water], [DATA/edin], [DATA/mednode]
 
-cf) Edinburgh dataset [DATA/edin] is a commercial dataset
+cf) Edinburgh dataset [DATA/edin] is a commercial dataset.
 
-:warning: **All images should be squared off with cropped edges.**
+:warning: **All images should be squared off with cropped edges. Please refer to the composition of Asan & Snu images**
 
 ```.bash
 # An example of training a Efficient-Lite0 with GAN5000 & Testing with SNU dataset
@@ -175,13 +175,15 @@ python3 run_all.py --result_file log.txt
 
 ## Deployment Tool for the Custom Algorithm (Experimental) ##
 
-We have released a simple training and web deployment code for testing in real-world settings.
+We have released a simple training and web deployment code for testing in real-world settings (Experimental).
 https://github.com/whria78/data-in-paper-out
 
 
 ## List of Dermatology Datasets - Clinical Photographs ##
 
 - CAN dataset (melanoma, nevus, and skin lesions; CAN5600 = 5,619 images, GAN5000 = 5,000 images, LESION130k = 132,673 images; https://github.com/whria78/can; https://doi.org/10.6084/m9.figshare.21507189)
+
+	cf) The ground truth determined solely by image finding makes it unsuitable as a validation dataset.
 
 - SNU Test dataset (general disorders; 240 images; https://figshare.com/articles/dataset/SNU_SNU_MELANOMA_and_Reddit_dataset_Quiz/6454973)
 
@@ -191,32 +193,40 @@ https://github.com/whria78/data-in-paper-out
 
 - Model Onychomycosis, Virtual dataset (6 nail disorders; 3,317 images; https://figshare.com/articles/dataset/Virtual_E_Dataset/5513407)
 
+	cf) The ground truth determined solely by image finding makes it unsuitable as a validation dataset.
+
 - RD Dataset (Reddit melanoma community images; 1,282 images; https://figshare.com/articles/dataset/RD_Dataset/15170853)
+
+	cf) The ground truth determined solely by image finding makes it unsuitable as a validation dataset.
 
 - PAD-UFES-20 (6 tumorous disorders; 2,298  images; https://data.mendeley.com/datasets/zr7vgbcyr2/1
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7479321/)
 
 - Edinburgh Dermofit [Commercial] (10 nodular disorders; 1,300 images; https://licensing.edinburgh-innovations.ed.ac.uk/product/dermofit-image-library)
 
+	cf) Edinburgh Dermofit is a commercial library.
+
 - MED-NODE (melanoma and nevus; 170 images; https://www.cs.rug.nl/~imaging/databases/melanoma_naevi/)
 
 - SD-198 (general disorders; 6,584 images; https://xiaoxiaosun.com/docs/2016-eccv-sd198.pdf)
 
-	cf) DermQuest, Galderma (website closed)
+	cf) DermQuest of Galderma (website now closed) is the source of the SD-198 dataset.
 
 - Diverse Dermatology Images (general disorders; 656 images; https://ddi-dataset.github.io/)
 
-- SKINCON (general disorders; 3,230 images; https://skincon-dataset.github.io/)
+- SKIN Concepts dataset, SKINCON (general disorders; 3,230 images; https://skincon-dataset.github.io/)
+
+	cf) https://www.dermaamin.com/site/ , http://atlasdermatologico.com.br/ are the source of the SKINCON dataset.
 
 - Fitzpatrick 17k (general disorders; 16,577 images; https://github.com/mattgroh/fitzpatrick17k)
 
-	cf) https://www.dermaamin.com/site/  http://atlasdermatologico.com.br/
+	cf) https://www.dermaamin.com/site/ , http://atlasdermatologico.com.br/ are the source of the Fitz17k dataset.
 
 - 7-point criteria evaluation database (melanoma and melanocytic disorders; 2,045 images; https://derm.cs.sfu.ca/Welcome.html)
 
 - Skin Cancer Detection dataset of university of Waterloo (melanoma and nevus; https://uwaterloo.ca/vision-image-processing-lab/research-demos/skin-cancer-detection)
 
-	cf) DermQuest, Galderma (website closed), http://www.dermis.net
+	cf) DermQuest of Galderma (website now closed), http://www.dermis.net are the source of the Waterloo dataset.
 
 - SKINL2 dataset (light field dataset of skin lesions; https://www.it.pt/AutomaticPage?id=3459)
 
@@ -226,6 +236,8 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7479321/)
 - DermIS, http://www.dermis.net
 
 - Dermatology ATLAS (Samuel Freire da Silva, Delso Bringel Calheiros), https://www.atlasdermatologico.com.br/
+
+- DermaAmin (Jehad amin katach), https://www.dermaamin.com/site/atlas-of-dermatology.html
 
 
 ## License
