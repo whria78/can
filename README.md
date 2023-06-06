@@ -199,7 +199,7 @@ https://github.com/whria78/data-in-paper-out
 
 	cf) The ground truth determined solely by image finding makes it unsuitable as a validation dataset.
 
-- PAD-UFES-20 (6 tumorous disorders; 2,298  images; https://data.mendeley.com/datasets/zr7vgbcyr2/1
+- PAD-UFES-20 (6 tumorous disorders; 2,298 images; https://data.mendeley.com/datasets/zr7vgbcyr2/1
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7479321/)
 
 - Edinburgh Dermofit [Commercial] (10 nodular disorders; 1,300 images; https://licensing.edinburgh-innovations.ed.ac.uk/product/dermofit-image-library)
@@ -224,11 +224,11 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7479321/)
 
 - 7-point criteria evaluation database (melanoma and melanocytic disorders; 2,045 images; https://derm.cs.sfu.ca/Welcome.html)
 
-- Skin Cancer Detection dataset of university of Waterloo (melanoma and nevus; https://uwaterloo.ca/vision-image-processing-lab/research-demos/skin-cancer-detection)
+- Skin Cancer Detection dataset of university of Waterloo (melanoma and nevus; 206 images; https://uwaterloo.ca/vision-image-processing-lab/research-demos/skin-cancer-detection)
 
 	cf) DermQuest of Galderma (website now closed), http://www.dermis.net are the source of the Waterloo dataset.
 
-- SKINL2 dataset (light field dataset of skin lesions; https://www.it.pt/AutomaticPage?id=3459)
+- SKINL2 dataset (light field dataset of skin lesions; 250 light fields; https://www.it.pt/AutomaticPage?id=3459)
 
 
 ## List of Dermatology Atlas Sites ##
