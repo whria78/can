@@ -255,7 +255,7 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7479321/)
 MIT license
 
 ## Citation
-Under review
+Generation of a Melanoma and Nevus Dataset from Unstandardized Clinical Photographs on the Internet (In-press)
 ```
 Soo Ick Cho ― Lunit Inc
 Cristian Navarrete-Dechent ― Pontificia Universidad Católica de Chile
