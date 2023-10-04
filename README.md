@@ -54,7 +54,9 @@ The EfficientNet-Lite0 trained on the annotated (CAN5600) or synthetic (GAN5000)
 
 ## 1. Download CAN5600 / CAN2000 / LESION130k datasets ##
 
-This repository only contains the download URLs of datasets. For further inquries, please email to Dr. Han (whria78@gmail.com).
+This repository only contains the download URLs of datasets. 
+The images of datasets are available at the following torrent address.
+https://github.com/whria78/can/blob/main/DATASET/CAN2000_CAN5600_GAN5000_DATASET.zip.torrent
 
 Please check dependencies.
 ```.bash
