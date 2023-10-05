@@ -259,7 +259,8 @@ MIT license
 
 ## Citation
 ```
-Generation of a Melanoma and Nevus Dataset from Unstandardized Clinical Photographs on the Internet. JAMA Dermatology, October 4, 2023
+Generation of a Melanoma and Nevus Dataset from Unstandardized Clinical Photographs on the Internet 
+JAMA Dermatology, October 4, 2023
 
 Soo Ick Cho ― Lunit Inc
 Cristian Navarrete-Dechent ― Pontificia Universidad Católica de Chile
