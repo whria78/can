@@ -35,7 +35,7 @@ The EfficientNet-Lite0 trained on the annotated (CAN5600) or synthetic (GAN5000)
 | &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; CAN5600.csv | CAN5600 dataset (URL, crop location)
 | &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; LESION130k.csv | LESION130k dataset (URL, crop location)
 | &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; download.py | Download script
-| &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; CAN2000_...torrent | CAN2000, CAN5600, GAN5000 images (.torrent; 10.57GB)
+| &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; CAN2000_...torrent | CAN2000, CAN5600, LESION130k images (.torrent; 10.57GB)
 | &ensp;&ensp;&boxvr;&nbsp; [SCRIPTS](https://github.com/whria78/can/tree/main/SCRIPTS) | Script
 | &ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; [DATA](https://github.com/whria78/can/tree/main/SCRIPTS/DATA) | Training and Test datasets
 | &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&boxvr;&nbsp; [asantest](https://github.com/whria78/can/tree/main/SCRIPTS/DATA/asantest) | Asan test dataset
